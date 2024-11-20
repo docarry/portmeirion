@@ -1,0 +1,127 @@
+<div id="footer">
+    <div class="inner" module="Layout_footer">
+        <!--@css(/css/module/layout/footer.css)-->
+        <div class="footer-left">
+            <div class="cs">
+                <p>고객센터</p>
+                <span class="cs-num">{$phone}</span>
+                <ul class="time">
+                    <li>업무시간 10:00 ~ 18:00</li>
+                    <li>점심시간 12:00 ~ 13:00</li>
+                    <li>휴무일 토요일, 일요일, 공휴일</li>
+                </ul>
+            </div>
+            <ul class="sns">
+                <li><a href="#"><img src="/img/icon/kakao.svg" alt="카카오톡"></a></li>
+                <li><a href="#"><img src="/img/icon/instagram.svg" alt="인스타그램"></a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <span module="Layout_LogoBottom">
+                <!--@css(/css/module/layout/logobottom.css)-->
+                <!-- <a href="/index.html">{$mall_name}</a> -->
+                <a href="/index.html"><img src="/img/portmeirionlogo.svg" alt="포트메리온 하단 로고"></a>
+            </span>
+            <ul class="utilMenu">
+                <!-- <li class="home"><a href="/index.html">홈</a></li> -->
+                <li><a href="/shopinfo/company.html">회사소개</a></li>
+                <li><a href="/member/agreement.html">이용약관</a></li>
+                <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
+                <!-- <li><a href="/shopinfo/guide.html">이용안내</a></li> -->
+                <!-- <div module="Layout_ReferenceCurrencyList" class="list"> -->
+                    <!--@css(/css/module/layout/multiCurrency.css)-->
+                    <!-- <button type="button" class="toggle" id="reference_currency_button">
+                        <span class="btn-global">Reference currency</span>
+                        <span class="currencyNow">{$current_reference_currency_code} {$current_reference_currency_symbol}</span>
+                    </button>
+                    <ul module="Layout_ReferenceCurrencyListitem" class="multicurrencylistitem" id="reference_currency_list">
+                        <li class="">
+                            <a href="#">
+                                <span class="name">{$reference_currency_code}</span>
+                                <span class="unit">{$reference_currency_symbol}</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <span class="name">{$reference_currency_code}</span>
+                                <span class="unit">{$reference_currency_symbol}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            </ul> 
+            <ul class="address">
+                <li>
+                    <p><span class="t01">상호 </span><span>{$company_name} </span></p>
+                    <p><span class="t01">대표 </span><span>{$president_name}</span></p>
+                    <p><span class="{$cpo_email|display} t01">개인정보보호책임자 <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></span></p>
+                </li>
+                <li>
+                    <p><span class="t01">사업자 등록번호 안내 </span><span>[{$company_regno}]</span></p>
+                    <p><span class="t01">통신판매업 신고 </span> <span>{$network_regno}</span> <span>{$biz_no_link}</span></p>
+                </li>
+                <li>
+                    <p><span class="t01">주소 </span><span>{$mall_zipcode} {$mall_addr1} {$mall_addr2}</span></p>
+                    <p><span class="hosting t01">호스팅제공 </span><span>카페24(주)</span></p>
+                </li>
+                <li>
+                    <span class="copyright">Copyright &copy; <strong>{$mall_name}</strong>. All rights reserved.</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="inner"> -->
+        <!-- <span module="Layout_LogoBottom"> -->
+            <!--@css(/css/module/layout/logobottom.css)-->
+            <!-- <a href="/index.html">{$mall_name}</a> -->
+            <!-- <a href="/index.html"><img src="/img/portmeirionlogo.svg" alt="포트메리온 하단 로고"></a>
+        </span> -->
+
+        <!-- <div module="Layout_footer"> -->
+            <!--@css(/css/module/layout/footer.css)-->
+            <!-- <ul class="utilMenu"> -->
+                <!-- <li class="home"><a href="/index.html">홈</a></li> -->
+                <!-- <li><a href="/shopinfo/company.html">회사소개</a></li>
+                <li><a href="/member/agreement.html">이용약관</a></li>
+                <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li> -->
+                <!-- <li><a href="/shopinfo/guide.html">이용안내</a></li> -->
+                <!-- <div module="Layout_ReferenceCurrencyList" class="list"> -->
+                    <!--@css(/css/module/layout/multiCurrency.css)-->
+                    <!-- <button type="button" class="toggle" id="reference_currency_button">
+                        <span class="btn-global">Reference currency</span>
+                        <span class="currencyNow">{$current_reference_currency_code} {$current_reference_currency_symbol}</span>
+                    </button>
+                    <ul module="Layout_ReferenceCurrencyListitem" class="multicurrencylistitem" id="reference_currency_list">
+                        <li class="">
+                            <a href="#">
+                                <span class="name">{$reference_currency_code}</span>
+                                <span class="unit">{$reference_currency_symbol}</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <span class="name">{$reference_currency_code}</span>
+                                <span class="unit">{$reference_currency_symbol}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div> -->
+            <!-- </ul>
+            <p class="address">
+                <span>상호 : {$company_name} </span>
+                <span>대표자(성명) : {$president_name}</span>
+                <span class="{$cpo_email|display}">개인정보보호책임자 : <a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></span><br />
+                <span>사업자 등록번호 안내 : [{$company_regno}]</span>
+                <span>통신판매업 신고 {$network_regno}</span> <span>{$biz_no_link}</span> <br />
+                <span>주소 : {$mall_zipcode} {$mall_addr1} {$mall_addr2}</span><br />
+                <span>전화 : {$phone}</span>
+                <span class="hosting"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/logo_cafe24.png" alt="hosting by cafe24 카페24(주)" /></span>
+                <span class="copyright">Copyright &copy; <strong>{$mall_name}</strong>. All rights reserved.</span> -->
+                <!-- <span>팩스 : {$fax}</span> -->
+                <!-- <span>Contact <strong><a href="mailto:{$email}">{$email}</a></strong> for more information.</span> -->
+            <!-- </p> -->
+            <!-- <p class="copyright">Copyright &copy; <strong>{$mall_name}</strong>. All rights reserved.</p> -->
+            <!-- <p class="hosting"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/logo_cafe24.png" alt="hosting by cafe24 카페24(주)" /></p> -->
+        <!-- </div>
+    </div> -->
+</div>

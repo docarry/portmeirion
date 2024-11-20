@@ -1,0 +1,58 @@
+$(function() {
+    // 탭 버튼 클릭 시
+    $('.tab-btn').on('click', function() {
+        var tabId = $(this).data('tab'); // 클릭한 탭의 ID 가져오기
+        
+        // 모든 탭 버튼과 내용 숨기기
+        $('.tab-btn').removeClass('active');
+        $('.tab-content').removeClass('active');
+
+        // 클릭한 탭 버튼 활성화 및 해당 탭 내용 표시
+        $(this).addClass('active');
+        $('#tab-' + tabId.charAt(tabId.length - 1)).addClass('active'); // tab1, tab2, ... 에 맞춰 ID 설정
+    });
+
+    // 헤더픽스
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 0){
+            $('#header').addClass('fix');
+
+        }else{
+            $('#header').removeClass('fix');
+
+        }
+    });
+});
+
+
+// 메인배너 스와이퍼 슬라이드 시작 //////////
+var mainBanner = new Swiper("#main-banner", {
+    loop: true,
+    pagination: {
+    el: "#main-banner .swiper-pagination",
+    clickable: true,
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+});
+// 메인배너 스와이퍼 슬라이드 종료 //////////
+
+
+// Popular Collections 스와이퍼 슬라이드 시작 //////////
+var popular = new Swiper("#popular .popular-wrap", {
+    slidesPerView: 3,
+    slidesPerGroup : 3,
+    spaceBetween: -60,
+    loop: true,
+    pagination: {
+    el: "#popular .popular-wrap .swiper-pagination",
+    clickable: true,
+    },
+    navigation: {
+        nextEl: '#popular .popular-wrap .swiper-button-next',
+        prevEl: '#popular .popular-wrap .swiper-button-prev',
+    },
+});
+// Popular Collections 스와이퍼 슬라이드 종료 //////////
