@@ -16,14 +16,29 @@ a:hover { text-decoration:none; }
     padding: 6.25rem 0;
     box-sizing: border-box;
 }
+.ec-base-product .title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+.ec-base-product .title h2{
+    font-weight: 500;
+    font-size: 2.25rem;
+    color: #333;
+    text-align: center;
+}
+.ec-base-product .title .sub-title{
+    text-align: center;
+    font-size: 1.125rem;
+    color: #A0A0A0;
+}
 /* ********** 공통 클래스 종료 ********** */
 
 
 /* ********** 헤더 시작 ********** */
 #header{
     background-color: #fff;
-}
-#header{
     border: 0;
 }
 #header:before,
@@ -440,7 +455,8 @@ a:hover { text-decoration:none; }
 }
 #minerals.ec-base-product .minerals-wrap ul.grid2 li .thumbnail { 
     float:none; 
-    width:15.625rem; 
+    max-width:15.625rem; 
+    width: 100%;
     text-align:left; 
     margin:0; 
 }
@@ -484,7 +500,6 @@ a:hover { text-decoration:none; }
 #popular .popular-wrap{
     max-width: 1600px;
     width: 100%;
-    padding: 6.25rem 0;
     margin: 0 auto;
 }
 #popular .popular-wrap.swiper {
@@ -496,12 +511,7 @@ a:hover { text-decoration:none; }
 }
 #popular .popular-wrap .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-}
-#popular .popular-wrap .title .sub-title{
-    text-align: center;
 }
 #popular .popular-wrap .swiper-pagination-bullet{
     width: calc(100% / 3);
@@ -520,32 +530,181 @@ a:hover { text-decoration:none; }
     height: 3.125rem;
     border-top: solid 1px #ccc;
     border-right: solid 1px #ccc;
-    transform: rotate(-135deg) scale(.6);
+    transform: rotate(-135deg) scale(.4);
 }
 #popular .popular-wrap .swiper-button-next{
     width: 3.125rem;
     height: 3.125rem;
     border-top: solid 1px #ccc;
     border-right: solid 1px #ccc;
-    transform: rotate(45deg) scale(.6);
+    transform: rotate(45deg) scale(.4);
 }
 #popular .popular-wrap .swiper-button-prev::after,
 #popular .popular-wrap .swiper-button-next::after{
     content: '';
 }
-/* #main-banner .swiper-pagination{
-    bottom: 30px;
-    width: auto;
-    left: 50px;
-} */
-#popular.ec-base-product .popular-wrap  .prdList { 
+#popular.ec-base-product .popular-wrap .prdList { 
     width:100%; 
     margin:0; 
+    padding: 3.75rem 0;
+    box-sizing: border-box;
 }
 #popular.ec-base-product .popular-wrap .prdList > li{
-    transform: scale(.7);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+#popular.ec-base-product .popular-wrap .prdList .thumbnail{
+    width: 80%;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+#popular.ec-base-product .popular-wrap .prdList .thumbnail a{
+    display: block;
+    background-color: #F8F8F8;
+    border-radius: 50%;
+}
+#popular.ec-base-product .prdList .description { 
+    padding: 0 0 1rem 0;
+    box-sizing: border-box;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#popular.ec-base-product .prdList .thumbnail .icon { 
+    margin:0; 
+    border-bottom:0; 
+    vertical-align:middle; 
+    width: 100%;
+}
+#popular.ec-base-product .prdList .thumbnail .wish{
+    position: static;
+    cursor:pointer;
+}
+#popular.ec-base-product .prdList .thumbnail .button { 
+    float:none; 
+    margin:0; 
+    display: flex;
+    justify-content: flex-end;
+}
+#popular.ec-base-product .prdList .thumbnail .button img { 
+    margin:0 2px 0 0; 
+    cursor:pointer; 
+}
+#popular.ec-base-product .prdList .thumbnail .button img:nth-child(5) { 
+    display: none;
+}
+#popular.ec-base-product .spec li{
+    text-align: center;
+}
+#popular.ec-base-product .spec li:nth-child(1){
+    margin-bottom: 10px;
+}
+#popular.ec-base-product .spec li:nth-child(2){
+    margin-right: 10px;
+}
+#popular.ec-base-product .spec li:nth-child(2),
+#popular.ec-base-product .spec li:nth-child(3){
+    display: inline-block;
+}
+#popular.ec-base-product .prdList .description .name{
+    text-align: center;
 }
 /* ********** Popular Collections 스와이퍼 슬라이드 종료 ********** */
+
+
+/* ********** Favorite Categories 스와이퍼 슬라이드 시작 ********** */
+#categories{
+    background-color: #F8F8F8;
+    padding: 6.25rem 0;
+    box-sizing: border-box;
+}
+#categories .categories-wrap{
+    display: flex;
+}
+#categories .categories-wrap .left{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+}
+#categories .categories-wrap .left img{
+    display: block;
+    max-width: 215px;
+}
+#categories .categories-wrap .left h2{
+    font-size: 1.75rem;
+    color: #333;
+    font-weight: 500;
+}
+#categories .categories-wrap .left p{
+    color: #A0A0A0;
+    font-weight: 500;
+}
+#categories .categories-wrap .right-slide{
+    width: 80%;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+#categories .categories-wrap .swiper {
+    width: 100%;
+    height: 100%;
+}
+#categories .categories-wrap .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 31.25rem;
+}
+#categories .categories-wrap .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#categories .categories-wrap .swiper-slide > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: #fff;
+    width: 70%;
+    height: 100%;
+}
+#categories .categories-wrap .swiper-slide .t01{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+#categories .categories-wrap .swiper-slide .t02{
+    margin: .25rem 0 2.5rem;
+}
+#categories .categories-wrap .swiper-slide .box{
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 18.75rem;
+    border-top-right-radius: 18.75rem;
+}
+#categories .categories-wrap .swiper-slide .box.cg01{
+    background: url(/img/cg01.jpg) no-repeat center / cover;
+}
+#categories .categories-wrap .c01{
+    background-color: #95657F;
+}
+#categories .categories-wrap .c02{
+    background-color: #C8A67F;
+}
+#categories .categories-wrap .c03{
+    background-color: #D0A29B;
+}
+/* ********** Favorite Categories 스와이퍼 슬라이드 종료 ********** */
 
 
 /* ********** 셀렉션 타이틀 시작 ********** */
