@@ -56,3 +56,11 @@ var popular = new Swiper("#popular .popular-wrap", {
     },
 });
 // Popular Collections 스와이퍼 슬라이드 종료 //////////
+
+
+// Favorite Categories 스와이퍼 슬라이드 시작 //////////
+var categories = new Swiper("#categories-slide", {
+    slidesPerView: 3,
+    spaceBetween: 40,
+});
+// Favorite Categories 스와이퍼 슬라이드 종료 //////////
