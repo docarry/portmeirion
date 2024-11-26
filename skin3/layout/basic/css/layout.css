@@ -36,7 +36,7 @@
 #contents { float:right; width:1014px; }
 #contents .visual img { max-width:100%; }
 #banner { position:absolute; top:0; left:0; width:90px; }
-#quick { position:absolute; top:0; right:0; width:90px; }
+#quick { position:fixed; top:calc(50% - 40px); right:0; width:90px; z-index: 9999;}
 #quick .banner a { display:block; margin:15px 0 0; }
 
 #footer { position:relative; margin:40px 0 0 0; border-top:1px solid #e8e8e8;  border-bottom:45px solid #e8e8e8; }

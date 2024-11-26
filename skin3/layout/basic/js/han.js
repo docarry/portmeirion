@@ -16,12 +16,44 @@ $(function() {
     $(window).on('scroll', function(){
         if($(window).scrollTop() > 0){
             $('#header').addClass('fix');
-
+            $('#quick').addClass('show');
         }else{
             $('#header').removeClass('fix');
-
+            $('#quick').removeClass('show');
         }
     });
+
+    $('#type').change(function() {
+        // 선택한 페이지로 이동
+        location.href = $(this).val();
+    });
+
+    // 페이지가 로드되었을 때 스크롤 위치 복원
+    var scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+        // 페이지 로딩 후 스크롤 위치가 저장되어 있으면 해당 위치로 이동
+        $(window).on('load', function() {
+            $(window).scrollTop(scrollPosition);
+            // 스크롤 위치 복원 후 sessionStorage에서 해당 값을 제거
+            sessionStorage.removeItem('scrollPosition');
+        });
+    }
+    
+    // 기존 정렬 방법 처리
+    var sSortName = CAPP_SHOP_FRONT_COMMON_UTIL.getParameterByName('sort_method');
+
+    if (sSortName !== '') {
+
+        if (sSortName.indexOf('#Product_ListMenu') < 0) {
+            sSortName = sSortName + '#Product_ListMenu';
+        }
+
+        $('#type>option').each(function() {
+            if ($(this).val().indexOf(sSortName) > 0) {
+                $(this).prop('selected', true);
+            }
+        });
+    }
 });
 
 

@@ -3,6 +3,7 @@ html, body, code{
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #333;
+    scroll-behavior: smooth;
 }
 #wrap { 
     width: 100%;
@@ -19,6 +20,8 @@ a:hover { text-decoration:none; }
 .ec-base-product .title{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     margin: 0;
 }
@@ -55,6 +58,12 @@ a:hover { text-decoration:none; }
 }
 .btn-wrap .more-btn:hover{
     border-bottom: solid 1px #999;
+}
+#quick{
+    display: none;
+}
+#quick.show{
+    display: block;
 }
 /* ********** 공통 클래스 종료 ********** */
 
@@ -131,7 +140,7 @@ a:hover { text-decoration:none; }
     top: 100%;
     left: 33.3333333%;
     z-index: 999;
-    transition: all .6s ease-in-out;
+    transition: all .2s ease-in-out;
     height: 14rem;
     opacity: 0;
     visibility: hidden;
@@ -169,9 +178,13 @@ a:hover { text-decoration:none; }
     position: absolute;
     height: 14rem;
     z-index: 98;
-    transition: all .6s ease-in-out;
+    transition: all .2s ease-in-out;
     opacity: 0;
     visibility: hidden;
+}
+#header .topArea .xans-layout-category .category_depth > li,
+.category_depth > .xans-record-{
+    display: none;
 }
 /* ********** 유틸메뉴 시작 ********** */
 .util-menu{
@@ -707,7 +720,7 @@ a:hover { text-decoration:none; }
     align-items: center;
     justify-content: flex-end;
     color: #fff;
-    width: 70%;
+    width: 76%;
     height: 100%;
 }
 #categories .categories-wrap .swiper-slide .t01{
@@ -863,9 +876,125 @@ a:hover { text-decoration:none; }
 
 
 /* ********** Media MINERALS 시작 ********** */
+#media.ec-base-product{
+    padding: 6.25rem 0 10rem;
+}
+#media .media-wrap .title{
+    padding: 0 0 10rem;
+}
+#media .media-wrap .title h2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#media .media-wrap .title h2 img{
+    display: inline-block;
+    max-width: 250px;
+    width: 100%;
+}
+#media .media-wrap .title h2 span{
+    letter-spacing: 7.2px;
+    font-weight: 400;
+}
 #media .media-bg{
     background-color: #D9D9D9;
     min-height: 31.25rem;
-    margin: 10rem 0;
+    padding: 10rem 0;
+    box-sizing: border-box;
+    position: relative;
+}
+#media .media-bg iframe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1240px;
+    transform: translate(-50%, -50%);
 }
 /* ********** Media MINERALS 종료 ********** */
+
+
+/* ********** Instagram 시작 ********** */
+#instagram{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.75rem;
+}
+#instagram .insta-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+#instagram .insta-wrap li{
+    width: calc(100% / 4);
+}
+#instagram .insta-wrap li a{
+    display: block;
+}
+#instagram .insta-wrap li a img{
+    display: block;
+    width: 100%;
+}
+/* ********** Instagram 종료 ********** */
+
+
+/* ********** list css 리스트 시작 ********** */
+.xans-product-menupackage{
+    margin: 0;
+}
+.xans-product-menupackage .title {
+    min-height: 30px;
+    margin: 0;
+    text-align: center;
+}
+.xans-product-menupackage .title h2 {
+    color: #000;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+.xans-product-menupackage .title .banner {
+    margin: 0;
+}
+.xans-product-normalmenu .function {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    margin: 0;
+}
+.xans-product-normalmenu .prdCount {
+    float: none;
+    padding: 0;
+    color: #999;
+    font-size: 0.875rem;
+}
+.xans-product-normalmenu .prdCount strong{
+    color: #000;
+}
+.xans-product-normalmenu #type {
+    border: none;
+}
+.xans-product-menupackage .title{
+    display: flex;
+}
+.xans-product-menupackage .title .banner{
+    width: 50%;
+}
+.xans-product-menupackage .title .banner img{
+    display: block;
+    width: 100%;
+}
+.xans-product-menupackage .title h2{
+    width: 50%;
+    background-color: #F1E6DA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.xans-product-menupackage .title h2 span{
+    font-size: 3.5rem;
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+/* ********** list css 리스트 종료 ********** */
