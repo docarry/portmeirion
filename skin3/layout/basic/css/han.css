@@ -65,6 +65,96 @@ a:hover { text-decoration:none; }
 #quick.show{
     display: block;
 }
+.ec-base-product .prdList{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ec-base-product .prdList > li{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.ec-base-product .prdList .thumbnail{
+    margin: 0;
+}
+.ec-base-product ul.grid4 > li{
+    width: 22%;
+}
+.ec-base-product .prdList .thumbnail a{
+    display: block;
+}
+.ec-base-product .prdList .description { 
+    padding: 0 0 1rem 0;
+    box-sizing: border-box;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ec-base-product .prdList .thumbnail .icon { 
+    margin:0; 
+    border-bottom:0; 
+    vertical-align:middle; 
+    width: 100%;
+}
+.ec-base-product .prdList .thumbnail .wish{
+    position: static;
+    cursor:pointer;
+}
+.ec-base-product .prdList .thumbnail .button { 
+    float:none; 
+    margin:0; 
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 1.25rem;
+}
+.ec-base-product .prdList .thumbnail .button img { 
+    margin:0 2px 0 0; 
+    cursor:pointer; 
+}
+.ec-base-product .prdList .thumbnail .button img:nth-child(5) { 
+    display: none;
+}
+.ec-base-product .spec li{
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ec-base-product .spec li:nth-child(1){
+    margin-bottom: 10px;
+}
+.ec-base-product .spec li:nth-child(2){
+    margin-right: 10px;
+}
+.ec-base-product .spec li:nth-child(2),
+.ec-base-product .spec li:nth-child(3){
+    display: inline-block;
+}
+.ec-base-product .prdList .description .name{
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ec-base-paginate {
+    margin: 30px 0 10rem;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+.discount-text{
+    color: #c10303;
+    margin-left: 10px;
+}
 /* ********** 공통 클래스 종료 ********** */
 
 
@@ -461,6 +551,9 @@ a:hover { text-decoration:none; }
     color:transparent; 
     vertical-align:middle; 
     display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: flex-start;
 }
 #minerals.ec-base-product .minerals-wrap .prdList > li:nth-child(1){
     flex-direction: row-reverse;
@@ -584,6 +677,7 @@ a:hover { text-decoration:none; }
     margin:0; 
     padding: 3.75rem 0;
     box-sizing: border-box;
+    flex-wrap: nowrap;
 }
 #popular.ec-base-product .popular-wrap .prdList > li{
     margin: 0;
@@ -659,6 +753,9 @@ a:hover { text-decoration:none; }
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+#popular.ec-base-product .prdList .thumbnail a img:hover {
+    transform: scale(1);
 }
 /* ********** Popular Collections 스와이퍼 슬라이드 종료 ********** */
 
@@ -961,19 +1058,20 @@ a:hover { text-decoration:none; }
     display: flex;
     justify-content: space-between;
     border: none;
-    margin: 0;
+    margin-top: 1rem;
 }
 .xans-product-normalmenu .prdCount {
     float: none;
     padding: 0;
-    color: #999;
-    font-size: 0.875rem;
+    color: #333;
+    font-size: 1rem;
 }
 .xans-product-normalmenu .prdCount strong{
     color: #000;
 }
 .xans-product-normalmenu #type {
     border: none;
+    background: none;
 }
 .xans-product-menupackage .title{
     display: flex;
@@ -993,8 +1091,55 @@ a:hover { text-decoration:none; }
     align-items: center;
 }
 .xans-product-menupackage .title h2 span{
-    font-size: 3.5rem;
+    font-size: 2.875rem;
     color: #333;
     border-bottom: 2px solid #333;
+}
+.ec-base-product .prdList .thumbnail{
+    overflow: hidden;
+}
+.ec-base-product .prdList .thumbnail a img{
+    transition: all .4s ease-in-out;
+}
+.ec-base-product .prdList .thumbnail a img:hover{
+    transform: scale(1.2);
+}
+.list-product .ec-base-product{
+    padding: 2.5rem 0;
+}
+.path{
+    padding: 2rem 0;
+}
+.xans-product-menupackage .menuCategory {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.xans-product-menupackage .menuCategory > li {
+    display: inline-block;
+    width: 175px;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: normal;
+    vertical-align: top;
+    text-align: center;
+}
+.xans-product-menupackage .menuCategory > li > a{
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+    border-bottom: 1px solid transparent;
+    padding: 0;
+}
+.xans-product-menupackage .menuCategory > li.selected > a {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+.xans-product-menupackage .menuCategory > li > a:hover {
+    color: #000;
 }
 /* ********** list css 리스트 종료 ********** */

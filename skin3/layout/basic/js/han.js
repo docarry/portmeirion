@@ -23,6 +23,11 @@ $(function() {
         }
     });
 
+    // 포트메리온 스토리 회사소개로 이동
+    $(document).on('click', '#header .main-category-list > li:first-child > a', function() {
+        $(this).attr("href", "https://soodesignshop.cafe24.com/shopinfo/company.html");
+    });
+
     $('#type').change(function() {
         // 선택한 페이지로 이동
         location.href = $(this).val();
