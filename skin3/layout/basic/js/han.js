@@ -59,6 +59,10 @@ $(function() {
             }
         });
     }
+
+    // jQuery(".xans-product-detail .imgArea .listImg >ul >li").click(function(){
+	// 	jQuery(this).addClass('on').siblings().removeClass('on');
+	// })
 });
 
 

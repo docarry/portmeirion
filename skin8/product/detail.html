@@ -484,11 +484,11 @@
                 <p class="ec-base-help txtWarn txt11 {$several_item_display|display}"> 위 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p>
                 <table border="1" summary="">
                     <caption>상품 목록</caption>
-                    <!-- <colgroup>
+                    <colgroup>
                         <col style="width:284px;" />
                         <col style="width:80px;" />
                         <col style="width:110px;" />
-                    </colgroup> -->
+                    </colgroup>
                     <thead>
                     <tr>
                         <th scope="col">상품명</th>
@@ -574,25 +574,21 @@
 
             <div id="{$total.total_price_id}" class="totalPrice">
                 <p class="ec-base-help txtWarn txt11 {$exclusive_purchase_olny|display}"> 단독구매상품</p>
-                <span><strong>총 상품금액</strong>(수량)</span><span class="{$total.total_cnt}"><strong><em>0</em></strong> (0개)</span>
+                <strong>총 상품금액</strong>(수량) : <span class="{$total.total_cnt}"><strong><em>0</em></strong> (0개)</span>
             </div>
             <p class="ec-base-help txt11 {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
 
 
             <div module="product_action">
-                <div id="ec-product-price-info" class="displaynone" ec-data-custom="{$product_custom}"ec-data-price="{$product_price}"></div>
                 <div class="ec-base-button gColumn">
-                    <a href="#none" class="wish gColumn-btn">{$wish_icon}</a>
-                    <a href="#none" class="sizeL {$basket_display|display} gColumn-btn basket-btn btn-default" onclick="{$action_basket}"><img src="//ecimg.cafe24img.com/pg1316b83733799093/soodesignshop/web/upload/icon_202411191735167900.jpg" alt="장바구니"></a>
-                    <!-- <a href="#none" class="btnNormal sizeL {$basket_display|display}" onclick="{$action_basket}">장바구니 담기</a> -->
-                    <!-- <span class="btnEm sizeL gFlex2 {$soldout_display|display}">SOLD OUT</span> -->
-                    <a href="#none" class="btnEm sizeL gFlex2 {$soldout_display|display} gColumn-btn btn-default">SOLD OUT</a>
-                    <!-- <a href="#none" onclick="{$action_wishlist}" class="btnNormal sizeL {$wishlist_display|display}">관심상품등록</a> -->
-                    <a href="#none" class="btnSubmit sizeL {$buy_display|display} gColumn-btn btn-default" onclick="{$action_buy}">
-                        <span id="{$btn_buy_id}">구매하기</span>
+                    <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy}">
+                        <span id="{$btn_buy_id}">바로 구매하기</span>
                         <span id="{$btn_reserve_id}" class="{$btn_reserve_class|display}">예약주문</span>
                         <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청하기</span>
                     </a>
+                    <a href="#none" class="btnNormal sizeL {$basket_display|display}" onclick="{$action_basket}">장바구니 담기</a>
+                    <span class="btnEm sizeL gFlex2 {$soldout_display|display}">SOLD OUT</span>
+                    <a href="#none" onclick="{$action_wishlist}" class="btnNormal sizeL {$wishlist_display|display}">관심상품등록</a>
                 </div>
 
                 <!-- 네이버 체크아웃 구매 버튼 -->
@@ -899,4 +895,3 @@
     </div>
 </div>
 <!--@define(cmc_log)-->
-<!--@js(/js/module/product/sale_price.js)-->
