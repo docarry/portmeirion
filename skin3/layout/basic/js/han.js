@@ -105,3 +105,5 @@ var categories = new Swiper("#categories-slide", {
     spaceBetween: 40,
 });
 // Favorite Categories 스와이퍼 슬라이드 종료 //////////
+
+
