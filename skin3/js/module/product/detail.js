@@ -58,31 +58,31 @@ jQuery(document).ready(function() {
 	if (jQuery('.xans-product-relation').val() != undefined) {	//관련상품 모듈 있을떄만 실행(없으면 주문서페이지에서 오류) -정환
 		var relation_slide = new Swiper('.relation_slide', {
 			slidesPerView: 5,
-            slidesPerGroup : 5,
-			spaceBetween: -20,
-			observer: true,
-			observeParents: true,
+            // slidesPerGroup : 5,
+			// spaceBetween: -20,
+			// observer: true,
+			// observeParents: true,
 			watchOverflow: 'true', // 스와이프가 한개일때 버튼 라인 비활성
 			speed:700,
 			navigation: {
-				nextEl: '.swiper-next-relation',
-				prevEl: '.swiper-prev-relation',
+				nextEl: '.relation_slide .swiper-next-relation',
+				prevEl: '.relation_slide .swiper-prev-relation',
 			},
 			pagination: {
-				el: '.swiper-pagination-relation',
-				clickable: true,
+				el: '.relation_slide .swiper-pagination-relation',
+				type: "fraction",
 			},
             loop: true,
-			// autoplay: {
-			// 	delay: 5000,
-			// 	disableOnInteraction: false,
-			// },
-			breakpoints: {
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-			}
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			// breakpoints: {
+			// 	768: {
+			// 		slidesPerView: 2,
+			// 		spaceBetween: 10,
+			// 	},
+			// }
 		}, 500);
 	}
 
