@@ -681,8 +681,8 @@
 					</ul>
 					<div class="swiper-pagination swiper-pagination-relation"></div>
 				</div>
-				<div class="swiper-prev swiper-prev-relation"></div>
-				<div class="swiper-next swiper-next-relation"></div>
+				<div class="swiper-prev swiper-prev-relation"><span></span></div>
+				<div class="swiper-next swiper-next-relation"><span></span></div>
 			</div>
 		</div><!-- //product_relation -->
 	</div><!-- //prdDetail -->
@@ -694,8 +694,8 @@
 			<div class="board_title">
 				<h2>REVIEW</h2>
 				<div class="ec-base-button">
-					<a href="{$review_list}" class="btnNormalFix">LIST</a>
-					<a href="{$review_write}" class="btnNormalFix">WRITE</a>
+					<a href="{$review_list}" class="btnNormalFix">모두보기</a>
+					<a href="{$review_write}" class="btnNormalFix">후기작성</a>
 				</div>
 			</div>
 			<div class="contents">
@@ -710,14 +710,14 @@
 					<div class="ec-base-table typeList">
 						<table border="1" class="{$list_display|display}">
 							<caption>상품사용후기</caption>
-							<colgroup>
+							<!-- <colgroup>
 								<col style="width:70px;" class="RW">
 								<col style="width:auto">
 								<col style="width:100px;">
 								<col style="width:100px;">
 								<col style="width:80px;">
 								<col style="width:80px;" class="{$use_point_display|display}">
-							</colgroup>
+							</colgroup> -->
 							<thead>
 								<tr>
 									<th scope="col" class="RW">번호</th>
@@ -749,18 +749,24 @@
 						</table>
 					</div>
 				</div>
-				<div module="product_reviewpaging" class="ec-base-paginate typeList">
-					<a href="{$param_first}" class="first">첫 페이지</a>
-					<a href="{$param_before}">이전 페이지</a>
-					<ol>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-					</ol>
-					<a href="{$param_next}">다음 페이지</a>
-					<a href="{$param_last}" class="last">마지막 페이지</a>
+				<div class="bottom-wrap">
+				    <div module="product_reviewpaging" class="ec-base-paginate typeList">
+    					<a href="{$param_first}" class="first">첫 페이지</a>
+    					<a href="{$param_before}">이전 페이지</a>
+    					<ol>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    					</ol>
+    					<a href="{$param_next}">다음 페이지</a>
+    					<a href="{$param_last}" class="last">마지막 페이지</a>
+    				</div>
+                    <div class="ec-base-button">
+                        <a href="{$review_list}" class="btnNormalFix">모두보기</a>
+                        <a href="{$review_write}" class="btnNormalFix">후기작성</a>
+                    </div>
 				</div>
 			</div>
 		</div><!-- //상품리뷰 -->
@@ -773,8 +779,8 @@
 			<div class="board_title">
 				<h2>Q&amp;A</h2>
 				<div class="ec-base-button">
-					<a href="{$qna_list}" class="btnNormalFix">LIST</a>
-					<a href="{$qna_write}" class="btnNormalFix">WRITE</a>
+					<a href="{$qna_list}" class="btnNormalFix">모두보기</a>
+					<a href="{$qna_write}" class="btnNormalFix">문의작성</a>
 				</div>
 			</div>
 			<div class="contents">
@@ -789,14 +795,14 @@
 					<div class="ec-base-table typeList">
 						<table border="1" class="{$list_display|display}">
 							<caption>상품 Q&amp;A</caption>
-							<colgroup>
+							<!-- <colgroup>
 								<col style="width:70px;" class="RW">
 								<col style="width:134px;">
 								<col style="width:auto">
 								<col style="width:80px;">
 								<col style="width:100px;">
 								<col style="width:55px;">
-							</colgroup>
+							</colgroup> -->
 							<thead>
 								<tr>
 									<th scope="col" class="RW">번호</th>
@@ -841,6 +847,10 @@
 					<a href="{$param_next}">다음 페이지</a>
 					<a href="{$param_last}" class="last">마지막 페이지</a>
 				</div>
+                <div class="ec-base-button">
+                    <a href="{$qna_list}" class="btnNormalFix">모두보기</a>
+                    <a href="{$qna_write}" class="btnNormalFix">문의작성</a>
+                </div>
 			</div>
 		</div><!-- //상품문의 -->
 	</div><!-- //prdQnA -->

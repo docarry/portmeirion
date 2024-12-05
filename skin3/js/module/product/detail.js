@@ -65,8 +65,8 @@ jQuery(document).ready(function() {
 			watchOverflow: 'true', // 스와이프가 한개일때 버튼 라인 비활성
 			speed:700,
 			navigation: {
-				nextEl: '.relation_slide .swiper-next-relation',
-				prevEl: '.relation_slide .swiper-prev-relation',
+				nextEl: '.relation .swiper-next-relation',
+				prevEl: '.relation .swiper-prev-relation',
 			},
 			pagination: {
 				el: '.relation_slide .swiper-pagination-relation',
