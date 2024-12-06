@@ -206,6 +206,38 @@ a:hover { text-decoration:none; }
 .ec-base-table.typeList td {
     padding: 16px 10px;
 }
+/* 장바구니 카운트 */
+/* .xans-layout-statelogon > a .count span{
+    height: 16px;
+    line-height: 13px;
+} */
+#header .topArea .xans-element-.xans-layout.xans-layout-statelogon a {
+    position: relative;
+}
+#header .topArea .util-menu .xans-layout-statelogon > a .count {
+    position: absolute;
+    top: 12px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    padding: 0 0 0 8px;
+}
+#header .topArea .xans-layout-statelogon > a .count span {
+    position: relative;
+    display: inline-block;
+    height: 17px;
+    background: none;
+}
 /* ********** 공통 클래스 종료 ********** */
 
 
@@ -1658,5 +1690,11 @@ a:hover { text-decoration:none; }
 .xans-product-additional .bottom-wrap .ec-base-button {
     margin: 30px 0 10rem;
     padding: 0 34px;
+}
+.xans-product-additional .bottom-wrap .ec-base-button a {
+    padding: 6px 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: .875rem;
+    width: 100px;
 }
 /* ********** detail 상품상세(디테일) 종료 ********** */

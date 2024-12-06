@@ -834,23 +834,25 @@
 						</table>
 					</div>
 				</div>
-				<div module="product_qnapaging" class="ec-base-paginate typeList">
-					<a href="{$param_first}" class="first">첫 페이지</a>
-					<a href="{$param_before}">이전 페이지</a>
-					<ol>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
-					</ol>
-					<a href="{$param_next}">다음 페이지</a>
-					<a href="{$param_last}" class="last">마지막 페이지</a>
+				<div class="bottom-wrap">
+				    <div module="product_qnapaging" class="ec-base-paginate typeList">
+    					<a href="{$param_first}" class="first">첫 페이지</a>
+    					<a href="{$param_before}">이전 페이지</a>
+    					<ol>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    						<li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    					</ol>
+    					<a href="{$param_next}">다음 페이지</a>
+    					<a href="{$param_last}" class="last">마지막 페이지</a>
+    				</div>
+                    <div class="ec-base-button">
+                        <a href="{$qna_list}" class="btnNormalFix">모두보기</a>
+                        <a href="{$qna_write}" class="btnNormalFix">문의작성</a>
+                    </div>
 				</div>
-                <div class="ec-base-button">
-                    <a href="{$qna_list}" class="btnNormalFix">모두보기</a>
-                    <a href="{$qna_write}" class="btnNormalFix">문의작성</a>
-                </div>
 			</div>
 		</div><!-- //상품문의 -->
 	</div><!-- //prdQnA -->
