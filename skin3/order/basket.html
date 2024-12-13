@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="path">
+<div class="path" id="basket-path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -7,7 +7,7 @@
     </ol>
 </div>
 
-<div class="titleArea">
+<div class="titleArea basket-title">
     <h2>장바구니</h2>
 </div>
 
@@ -424,7 +424,7 @@
 
         <table border="1" summary="" module="Order_NormIndividual">
             <caption>개별배송</caption>
-            <colgroup>
+            <!-- <colgroup>
                 <col style="width:27px" />
                 <col style="width:92px" />
                 <col style="width:auto" />
@@ -434,7 +434,7 @@
                 <col style="width:85px"/>
                 <col style="width:98px" />
                 <col style="width:110px" />
-            </colgroup>
+            </colgroup> -->
             <thead>
             <tr>
                 <th scope="col"><input type="checkbox" onclick='{$chk_basketlist}' /></th>

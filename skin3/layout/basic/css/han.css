@@ -238,6 +238,17 @@ a:hover { text-decoration:none; }
     height: 17px;
     background: none;
 }
+/* 서브페이지 타이틀 */
+.titleArea {
+    border-bottom: 0;
+}
+.titleArea h2 {
+    color: #000;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    font-weight: 400;
+}
 /* ********** 공통 클래스 종료 ********** */
 
 
@@ -1214,7 +1225,7 @@ a:hover { text-decoration:none; }
 }
 .xans-product-menupackage .menuCategory > li > a{
     background: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
     color: #333;
     border-bottom: 1px solid transparent;
@@ -1503,6 +1514,7 @@ a:hover { text-decoration:none; }
     letter-spacing:-0.05em;
     white-space:nowrap;
     vertical-align: middle;
+    border-bottom:1px solid transparent;
 }
 .tabProduct li:last-child a {border-right:0;}
 .tabProduct li.selected {border:0;}
@@ -1697,4 +1709,126 @@ a:hover { text-decoration:none; }
     font-size: .875rem;
     width: 100px;
 }
+#prdInfo{
+    padding: 0 0 4rem 0;
+}
+.detail_guide .ec-base-fold.theme1 .title h2 {
+    padding: 1.25rem 1rem;
+    font-size: 1rem;
+    color: #000;
+}
+.detail_guide .ec-base-fold.theme1 .contents {
+    padding: 1rem;
+    font-size: .875rem;
+    color: #999;
+}
+#prdReview .contents .nodata,
+#prdQnA .contents .nodata{
+    text-align: center;
+}
 /* ********** detail 상품상세(디테일) 종료 ********** */
+
+
+/* ********** search 검색창 시작 ********** */
+#searchContent,
+.btnSearchOption{
+    display: none;
+}
+.xans-element-.xans-product.xans-record-.xans-product-searchdata .searchField {
+    background: none;
+}
+.xans-element-.xans-product.xans-record-.xans-product-searchdata .searchResult {
+    border: 0;
+    text-align: center;
+}
+.xans-element-.xans-product.xans-record-.xans-product-searchdata .searchResult .record {
+    float: none;
+    color: #333;
+}
+/* ********** search 검색창 종료 ********** */
+
+
+/* ********** basket 장바구니 시작 ********** */
+#basket-path{
+    visibility: hidden;
+}
+.titleArea.basket-title{
+    margin-bottom: 4rem;
+}
+.xans-element-.xans-order.xans-order-basketpackage .orderStep,
+.xans-element-.xans-order.xans-order-basketpackage .typeMember,
+.xans-element-.xans-order.xans-order-basketpackage .typeLight .menu li:nth-child(2){
+    display: none;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-tab .menu{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-tab.typeLight .menu li.selected a {
+    color: #000;
+    font-weight: 400;
+}
+.xans-element-.xans-order.xans-order-basketpackage .xans-order-empty p {
+    text-align: center;
+    font-weight: 400;
+    color: #707070;
+    padding: 36px 0px;
+    margin: 80px 0px;
+    background: url('/img/icon/Info_light.svg') no-repeat center top;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnSubmitFix,
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnEmFix,
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnNormalFix{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13px;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnSubmitFix{
+    background-color: #000;
+    border: none;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnSubmitFix:hover{
+    background-color: #333;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnEmFix,
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnNormalFix{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #d1d1d1;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnEmFix:hover,
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-button.justify .btnNormalFix:hover{
+    background-color: #f5f5f5;
+}
+.orderListArea.ec-base-table.typeList.gBorder thead th{
+    font-weight: 400;
+    border-left: none;
+    font-size: .875rem;
+    background: none;
+}
+input[type=checkbox]:not(old) {
+    background: url('/img/icon/Square_Check.svg') no-repeat;
+    width: 20px !important;
+    height: 20px !important;
+    -webkit-appearance: none;
+}
+input[type=checkbox]:not(old):checked {
+    background: url('/img/icon/Square_Check_on.svg') no-repeat;
+    width: 20px !important;
+    height: 20px !important;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-table td.thumb img {
+    max-width: 160px;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-table.typeList td {
+    padding: 24px 16px 24px 16px;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.xans-element-.xans-order.xans-order-list.center tr .left.gClearLine .name {
+    font-weight: 400;
+}
+.xans-element-.xans-order.xans-order-basketpackage .ec-base-table.gBorder td {
+    border-left: none;
+}
+/* ********** basket 장바구니 종료 ********** */
