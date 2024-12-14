@@ -1824,11 +1824,103 @@ input[type=checkbox]:not(old):checked {
     padding: 24px 16px 24px 16px;
     font-size: 14px;
     color: #3a3a3a;
+    background: none;
 }
 .xans-element-.xans-order.xans-order-list.center tr .left.gClearLine .name {
     font-weight: 400;
 }
 .xans-element-.xans-order.xans-order-basketpackage .ec-base-table.gBorder td {
     border-left: none;
+}
+.xans-element-.xans-order.xans-order-basketpackage .right{
+    text-align: center;
+}
+.orderListArea.ec-base-table.typeList.gBorder table tbody td .ec-base-qty {
+    position: relative;
+    display: inline-block;
+    width: 103px;
+    padding: 0 30px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.orderListArea.ec-base-table.typeList.gBorder table tbody td .ec-base-qty input {
+    width: 45px;
+    height: 30px;
+    padding: 0;
+    line-height: 28px;
+    border: solid 1px #eee;
+    text-align: center;
+    outline: none;
+    color: #000;
+    border-radius: 0;
+}
+.orderListArea.ec-base-table.typeList.gBorder table tbody td .ec-base-qty .up {
+    left: auto;
+    right: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.orderListArea.ec-base-table.typeList.gBorder table tbody td .ec-base-qty a {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #eee;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 150%;
+    color: transparent;
+    font-size: 1px;
+    line-height: 1px;
+    background-color: #eee;
+}
+.orderListArea.ec-base-table.typeList.gBorder table tbody td .ec-base-qty a::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    width: 9px;
+    height: 1px;
+    background: #000;
+}
+.orderListArea.ec-base-table.typeList.gBorder table tbody td .ec-base-qty .up::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1px;
+    height: 9px;
+    margin: -4px 0 0 0;
+    background: #000;
+}
+.orderListArea.ec-base-table.typeList.gBorder table tbody td .ec-base-qty .down {
+    left: 0;
+    top: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.xans-element-.xans-order.xans-order-basketpackage a[class^='btnNormal']{
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.xans-element-.xans-order.xans-order-basketpackage a[class^='btnNormal'].gBlank5{
+    padding: 4px 10px;
+    border-radius: 3px;
+}
+.xans-order-basketpackage .ec-base-table.gBorder td.button a {
+    width: 120px;
+    margin: 3px 0px;
+}
+.xans-order-basketpackage a[class^='btnSubmit'] {
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.xans-element-.xans-order.xans-order-basketpackage a[class^='btnSubmit']:not(.disabled):hover {
+    background-color: #333;
 }
 /* ********** basket 장바구니 종료 ********** */
