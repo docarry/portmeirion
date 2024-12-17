@@ -287,6 +287,7 @@ select {
     background-color: #fff;
     min-width: 86px;
     padding: 0 40px 0 16px;
+    height: auto;
 }
 /* radio 버튼 */
 input[type=radio]:not(old) {
@@ -303,6 +304,11 @@ input[type=radio]:not(old):checked {
     background-size: 20px 20px;
     width: 20px !important;
     height: 20px !important;
+}
+/* 필수이미지 */
+.ec-base-table.typeWrite img {
+    max-width: 100% !important;
+    height: auto !important;
 }
 /* ********** 공통 클래스 종료 ********** */
 
@@ -1222,7 +1228,6 @@ input[type=radio]:not(old):checked {
 }
 .xans-product-normalmenu #type {
     border: none;
-    background: none;
 }
 .xans-product-menupackage .title{
     display: flex;
@@ -2127,7 +2132,8 @@ input[type=checkbox]:not(old):checked {
     border-radius: 4px;
     box-sizing: border-box;
 }
-.xans-member-findid .findId #name, .xans-member-findid .findId #email {
+.xans-member-findid .findId #name, 
+.xans-member-findid .findId #email {
     width: 100%;
 }
 .xans-member-findid .findId #mobile1, 
@@ -2170,5 +2176,198 @@ input[type=checkbox]:not(old):checked {
     background-color: #333;
 }
 /* 비밀번호 찾기 */
-
+.xans-member-findpasswd .findPw fieldset {
+    margin: 0;
+}
+.xans-member-findpasswd .findPw .ec-base-desc .term{
+    width: 100%;
+}
+.xans-member-findpasswd .findPw .ec-base-desc dt, 
+.xans-member-findpasswd .findPw .ec-base-desc .term{
+    font-size: 14px;
+    line-height: 20px;
+    display: block;
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+    font-weight: 500;
+}
+.xans-member-findpasswd .findPw .ec-base-desc dd, 
+.xans-member-findpasswd .findPw .ec-base-desc .desc {
+    padding: 0;
+    line-height: 18px;
+    margin-bottom: 0px;
+}
+.xans-member-findpasswd .findPw select {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    margin-top: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.xans-member-findpasswd .findPw .ec-base-desc .desc .check {
+    margin-bottom: 40px;
+}
+.xans-member-findpasswd .findPw .check label {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0 16px 0 4px !important;
+    vertical-align: middle;
+}
+.xans-member-findpasswd .findPw input[type=text],
+.xans-member-findpasswd .findPw input[type=password] {
+    width: 100%;
+    font-size: 14px;
+    padding: 0 16px;
+    margin: 8px 0 24px 0;
+    height: 48px;
+    line-height: 48px;
+    color: #5a5a5a;
+    border: 0;
+    border: 1px solid #e9e9e9;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.xans-member-findpasswd .txtInfo {
+    margin: -16px 0px 24px;
+    font-size: 14px;
+}
+.xans-member-findpasswd .findPw #mobile1, 
+.xans-member-findpasswd .findPw #mobile2, 
+.xans-member-findpasswd .findPw #mobile3 {
+    width: 120px;
+}
+.xans-member-findpasswd .findPw span.dash {
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    width: 20px;
+    margin-top: -16px;
+    text-align: center;
+    vertical-align: middle;
+}
+.xans-member-findpasswd .findPw .ec-base-button {
+    padding: 16px 0 0px;
+}
 /* ********** login 로그인 종료 ********** */
+
+
+/* ********** join 회원가입 시작 ********** */
+#join-path{
+    visibility: hidden;
+}
+#join-title h2{
+    margin-bottom: 60px;
+}
+.xans-member-join .ec-base-table table {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid #202020;
+    text-align: start;
+}
+.xans-member-join .ec-base-table tbody th {
+    border: 0;
+    border-bottom: 1px solid #eee;
+    padding: 16px 0 16px 18px;
+    background-color: #fafafa;
+    font-size: 14px;
+    color: #202020;
+    line-height: 34px;
+}
+.xans-member-join .ec-base-table tbody td {
+    border: 0;
+    border-bottom: 1px solid #eee;
+    padding: 16px 0 16px 18px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #9f9f9f;
+    line-height: 34px;
+}
+.xans-member-join #name, 
+.xans-member-join #user_passwd_confirm, 
+.xans-member-join #passwd, 
+.xans-member-join #member_id {
+    width: 204px;
+}
+.xans-member-join .ec-base-table tbody td input {
+    padding: 0 10px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e9e9e9;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+.xans-member-join input[type=text], 
+.xans-member-join input[type=password] {
+    font-size: 14px;
+}
+.xans-member-join #phone2, 
+.xans-member-join #phone3, 
+.xans-member-join #mobile2, 
+.xans-member-join #mobile3 {
+    width: 80px;
+    margin: 0 7px;
+}
+.xans-member-join > h3  {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    text-align: left;
+    margin: 0 0 16px 0;
+    padding: 80px 0 0 0;
+}
+.xans-member-join .ec-base-box.gStrong {
+    border: none;
+    border-top: 1px solid #202020;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 24px 0 24px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #202020;
+    background-color: transparent;
+}
+.xans-member-join .ec-base-box.typeThinBg.agreeArea {
+    background-color: transparent;
+    border: none;
+}
+.xans-member-join .ec-base-box.typeThinBg.agreeArea.join-show{
+    border-bottom: 1px solid #e8e8e8;
+}
+.xans-member-join .agreeArea label.check {
+    color: #949494;
+    font-weight: 400;
+}
+.xans-member-join .agreeArea .content {
+    color: #949494;
+    font-size: .75rem;
+}
+.xans-member-join .agreeArea .ec-base-chk {
+    margin: 0 9px 0 0;
+}
+.xans-member-join .ec-base-button {
+    padding: 40px 0 60px;
+}
+.xans-member-join .ec-base-button a {
+    width: 200px !important;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    padding: 0;
+    margin: 20px auto;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.xans-member-join .ec-base-button a:hover {
+    background-color: #333;
+}
+/* ********** join 회원가입 종료 ********** */
