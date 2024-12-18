@@ -27,6 +27,14 @@ $(function() {
     $(document).on('click', '#header .main-category-list > li:first-child > a', function() {
         $(this).attr("href", "https://soodesignshop.cafe24.com/shopinfo/company.html");
     });
+    // 공지사항으로 이동
+    $(document).on('click', '#header .sub-category-list:nth-child(2) > li:first-child > a', function() {
+        $(this).attr("href", "https://soodesignshop.cafe24.com/board/free/list.html?board_no=1");
+    });
+    // 이벤트로 이동
+    $(document).on('click', '#header .sub-category-list:nth-child(2) > li:nth-child(2) > a', function() {
+        $(this).attr("href", "https://soodesignshop.cafe24.com/board/gallery/list.html");
+    });
 
     $('#type').change(function() {
         // 선택한 페이지로 이동
