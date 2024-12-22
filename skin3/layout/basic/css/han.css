@@ -320,6 +320,10 @@ input[type=radio]:not(old):checked {
     margin: 80px 0px !important;
     background: url('/img/icon/Info_light.svg') no-repeat center top;
 }
+/* 게시판 페이지네이션 */
+.board-paginate.ec-base-paginate {
+    margin: 30px 0 2rem;
+}
 /* ********** 공통 클래스 종료 ********** */
 
 
@@ -1716,7 +1720,7 @@ input[type=radio]:not(old):checked {
 #prdReview .ec-base-table thead th:nth-child(2),
 #prdQnA .ec-base-table thead th:nth-child(3){
     text-align: left;
-    text-indent: 10px;
+    text-indent: 25px;
 }
 .xans-product-additional .ec-base-table thead th{
     border-bottom: 1px solid #000;
@@ -1798,6 +1802,9 @@ input[type=radio]:not(old):checked {
 #prdReview .contents .nodata,
 #prdQnA .contents .nodata{
     text-align: center;
+}
+.xans-product-additional .ec-base-table.typeList .center td.left{
+    padding-left: 24px;
 }
 /* ********** detail 상품상세(디테일) 종료 ********** */
 
@@ -2390,6 +2397,7 @@ input[type=checkbox]:not(old):checked {
 #board-path{
     visibility: hidden;
 }
+.xans-board-writepackage .titleArea p,
 .xans-board-listpackage .titleArea p{
     visibility: hidden;
 }
@@ -2477,9 +2485,7 @@ input[type=checkbox]:not(old):checked {
 .xans-board-buttonlist.ec-base-button.typeBG a:hover {
     background-color: #333;
 }
-.board-paginate.ec-base-paginate {
-    margin: 30px 0 2rem;
-}
+
 .board-search.xans-board-search {
     text-align: center;
     padding: 2rem 0 6rem;
@@ -2521,4 +2527,72 @@ input[type=checkbox]:not(old):checked {
 .board-search.xans-board-search .btnEmFix:hover {
     background: #333;
 }
+.board-search.xans-board-search .category{
+    display: none;
+}
 /* ********** board/product/list 상품 사용후기 종료 ********** */
+
+
+/* ********** board/product/write 글쓰기 시작 ********** */
+.xans-board-writepackage .ec-base-box.typeProduct {
+    border: 1px solid #e9e9e9;
+}
+.xans-board-writepackage .ec-base-box.typeProduct .thumbnail {
+    width: 130px;
+}
+.xans-board-writepackage .xans-board-write .information h3 {
+    margin: 17px 0 5px;
+    font-size: 14px;
+    color: #2e2e2e;
+    font-weight: 400;
+}
+.xans-board-writepackage .xans-board-write .information .price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ea0a2a !important;
+}
+.xans-board-writepackage .ec-base-box.typeProduct .thumbnail img {
+    border: none;
+}
+.xans-board-writepackage .xans-board-write .information .button{
+    padding: 13px 0 16px 0;
+}
+.xans-board-writepackage .xans-board-write .information .button [class^='btnEm'] {
+    height: auto;
+    line-height: 22px;
+    font-size: 12px;
+    padding: 2px 8px;
+    width: auto !important;
+    background-color: #000;
+    font-family: "Noto Sans KR", sans-serif;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 300;
+}
+.xans-board-writepackage .xans-board-write .information .button [class^='btnNormal'] {
+    height: auto;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 2px 8px;
+    width: auto !important;
+    background-color: #fff;
+    font-family: "Noto Sans KR", sans-serif;
+    border-radius: 4px;
+    color: #000;
+    font-weight: 300;
+}
+.xans-board-writepackage .xans-board-write .information .button [class^='btnEm']:hover{
+    background-color: #333;
+}
+.xans-board-writepackage .xans-board-write .information .button [class^='btnNormal']:hover{
+    background-color: #f5f5f5;
+}
+.xans-board-writepackage .ec-base-table table {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid #202020;
+}
+/* ********** board/product/write 글쓰기 종료 ********** */
