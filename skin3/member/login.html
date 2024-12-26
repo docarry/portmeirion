@@ -1,77 +1,150 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li title="현재 위치"><strong>로그인</strong></li>
-    </ol>
-</div>
 
-<div class="titleArea">
-    <h2>로그인</h2>
-</div>
+<div class="df-login">
 
-<div module="member_login" class="ec-base-box typeThin">
-    <!--@css(/css/module/member/login.css)-->
-    <!--
-        $defaultReturnUrl = /index.html
-        $forbidIpUrl = member/adminFail.html
-    -->
-    <div class="login">
-        <fieldset>
-            <legend>회원로그인</legend>
-         <div class="login_title">ID</div>
-            <label class="id ePlaceholder" title="아이디">{$form.member_id}</label>
-         <div class="login_title">PASSWORD</div>
-            <label class="password ePlaceholder" title="비밀번호">{$form.member_passwd}</label>
-            <div class="cboth security">
-                {$form.member_check_save_id}
-                {$form.member_check_secret_connect}
-            <ul>
-               <li><a href="/member/id/find_id.html">아이디 찾기</a></li>
-               <li>/</li>
-               <li><a href="/member/passwd/find_passwd_info.html">비밀번호 찾기</a></li>
+    <!-- 헤더 -->
+    <div class="df-login-header">
+		<div class="df-login-header-button df-login-header-button_prev" onclick="history.go(-1);return false;"><svg viewBox="0 -960 960 960"><path d="m294.922-450.001 227.846 227.847L480-180.001 180.001-480 480-779.999l42.768 42.153-227.846 227.847h485.077v59.998H294.922Z"></path></svg></div>
+		<a href="/" class="df-login-header-button df-login-header-button_home"><svg viewBox="4 3 16 18"><path d="M4,10V21h6V15h4v6h6V10L12,3Z"></path></svg></a>
+	</div>
+
+	<!-- 타이틀 -->
+	<div class="df-login-titlearea">
+		<h2 class="df-login-titlearea-title"><!-- LOGIN --></h2>
+		<p class="df-login-titlearea-info"><!-- INFO --></p>
+	</div>
+
+	<!-- 빠른 로그인 -->
+	<form id="member_form_7561985391" name="" action="/exec/front/Member/login/" method="post" target="_self" enctype="multipart/form-data">
+<input id="returnUrl" name="returnUrl" value="/index.html" type="hidden"><input id="forbidIpUrl" name="forbidIpUrl" value="/" type="hidden"><input id="certificationUrl" name="certificationUrl" value="/intro/adult_certification.html" type="hidden"><input id="sIsSnsCheckid" name="sIsSnsCheckid" value="" type="hidden"><input id="sProvider" name="sProvider" value="" type="hidden"><div class="xans-element- xans-member xans-member-login "><div class="df-login-sns">
+
+			<!-- 카카오 로그인 -->
+			<!-- <a href="#none" class="df-login-sns-item df-login-sns-item_kakao df-login-sns-item_kakao " title="KAKAO LOGIN" onclick="{$kakao_func_login}">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2.772c-5.523,0-10,3.53-10,7.885,0,2.815,1.872,5.285,4.687,6.68-.153.528-.984,3.4-1.017,3.624,0,0-.02.169.09.234A.3.3,0,0,0,6,21.209c.315-.043,3.649-2.385,4.226-2.792A12.608,12.608,0,0,0,12,18.541c5.523,0,10-3.53,10-7.884S17.523,2.772,12,2.772ZM7.048,12.858a.578.578,0,0,1-1.154,0V9.431h-.9a.565.565,0,1,1,0-1.13H7.948a.565.565,0,1,1,0,1.13h-.9Zm4.849.464a.875.875,0,0,1-.367.079.472.472,0,0,1-.48-.254l-.286-.748H9.005l-.286.748a.472.472,0,0,1-.48.254.874.874,0,0,1-.366-.079c-.159-.074-.312-.275-.137-.819L9.116,8.87a.8.8,0,0,1,1.538,0L12.033,12.5C12.209,13.047,12.056,13.249,11.9,13.322Zm2.916,0H12.962a.542.542,0,0,1-.553-.529V8.878a.589.589,0,0,1,1.178,0v3.389h1.226a.529.529,0,1,1,0,1.058Zm4.292-.054a.566.566,0,0,1-.347.116.573.573,0,0,1-.461-.229l-1.353-1.793-.2.2v1.259a.577.577,0,0,1-1.154,0V8.878a.577.577,0,0,1,1.154,0v1.24l1.609-1.61a.448.448,0,0,1,.32-.128.584.584,0,0,1,.567.536.451.451,0,0,1-.127.351L17.8,10.582l1.42,1.881a.577.577,0,0,1-.113.808ZM9.885,9.74l.576,1.637H9.308Z"></path></svg>
+			</a> -->
+
+			<!-- 네이버 로그인 -->
+			<!-- <a href="#none" class="df-login-sns-item df-login-sns-item_naver df-login-sns-item_naver " title="NAVER LOGIN" onclick="{$naver_func_login}">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.891 595.281"><polygon points="516.19,0 516.19,291.687 325.7,0 123.304,0 123.304,595.281 325.7,595.281 325.7,297.64     516.19,595.281 718.586,595.281 718.586,0   "></polygon></svg>	
+			</a> -->
+
+            <ul class="snsArea" module="member_login">
+                <li class="{$display_naver|display}">
+                    <a href="#none" class="df-login-sns-item df-login-sns-item_naver df-login-sns-item_naver " title="NAVER LOGIN" onclick="{$naver_func_login}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.891 595.281"><polygon points="516.19,0 516.19,291.687 325.7,0 123.304,0 123.304,595.281 325.7,595.281 325.7,297.64     516.19,595.281 718.586,595.281 718.586,0   "></polygon></svg>	
+                    </a>
+                </li>
+                <li>
+                    <a href="#none" class="df-login-sns-item df-login-sns-item_kakao df-login-sns-item_kakao " title="KAKAO LOGIN" onclick="{$kakao_func_login}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,2.772c-5.523,0-10,3.53-10,7.885,0,2.815,1.872,5.285,4.687,6.68-.153.528-.984,3.4-1.017,3.624,0,0-.02.169.09.234A.3.3,0,0,0,6,21.209c.315-.043,3.649-2.385,4.226-2.792A12.608,12.608,0,0,0,12,18.541c5.523,0,10-3.53,10-7.884S17.523,2.772,12,2.772ZM7.048,12.858a.578.578,0,0,1-1.154,0V9.431h-.9a.565.565,0,1,1,0-1.13H7.948a.565.565,0,1,1,0,1.13h-.9Zm4.849.464a.875.875,0,0,1-.367.079.472.472,0,0,1-.48-.254l-.286-.748H9.005l-.286.748a.472.472,0,0,1-.48.254.874.874,0,0,1-.366-.079c-.159-.074-.312-.275-.137-.819L9.116,8.87a.8.8,0,0,1,1.538,0L12.033,12.5C12.209,13.047,12.056,13.249,11.9,13.322Zm2.916,0H12.962a.542.542,0,0,1-.553-.529V8.878a.589.589,0,0,1,1.178,0v3.389h1.226a.529.529,0,1,1,0,1.058Zm4.292-.054a.566.566,0,0,1-.347.116.573.573,0,0,1-.461-.229l-1.353-1.793-.2.2v1.259a.577.577,0,0,1-1.154,0V8.878a.577.577,0,0,1,1.154,0v1.24l1.609-1.61a.448.448,0,0,1,.32-.128.584.584,0,0,1,.567.536.451.451,0,0,1-.127.351L17.8,10.582l1.42,1.881a.577.577,0,0,1-.113.808ZM9.885,9.74l.576,1.637H9.308Z"></path></svg>
+                    </a>
+                </li>
             </ul>
-            </div>
 
-         <a href="#none" class="cboth btnLogin_bk" onclick="{$action_func_login}">로그인</a>
-
-         <div class="login__sns">
-            <div class="wrap_sns_log">
-               <a href="#none" class="btnKakao {$display_kakao|display}" onclick="{$kakao_func_login}">카카오 로그인</a>
-               <a href="#none" class="btnNaver {$display_naver|display}" onclick="{$naver_func_login}">네이버 로그인</a>
-               <a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}">페이스북 로그인</a>
-               <a href="#none" class="btnLine {$display_line|display}" onclick="{$line_func_login}">라인 로그인</a>
-               <a href="#none" class="btnGoogle {$display_google|display}" onclick="{$google_func_login}">구글 로그인</a>
-               <a href="#none" class="btnApple {$display_apple|display}" onclick="{$apple_func_login}">애플 로그인</a>
-            </div>
-            </div>
-
-         <div class="join_box">
-            아직 회원이 아니신가요?<br />회원가입을 하시면 다양하고 특별한 혜택이 준비되어 있습니다.<br /><br />
-            <a href="/member/join.html" class="btnLogin_wh">회원가입</a>
-         </div>
-
-            <div class="join_box {$display_nomember|display}" id="noMemberWrap">
-                <br /><br />비회원의 경우, 해당버튼을 통해 주문이 가능합니다.<br /><br />
-                <a href="{$returnUrl}" class="btnLogin_wh" onclick="{$action_nomember_order}">비회원 주문하기</a>
-            </div>
-        </fieldset>
-    </div>
+		</div>
 </div>
+</form>
+	<!-- 배너매니저: 로그인 배너 -->
+	<div class="df-login-banner df-bannermanager df-bannermanager-df-login-banner" df-banner-code="df-login-banner">
+		<a href="/board/gallery/list.html" target="" rel="" df-banner-clone=""><img src="/img/login-banner.jpg" alt="로그인 배너"><div class="df-banner-desc"></div></a>
+	</div>
 
-<div module="MyShop_OrderHistoryNologin" class="ec-base-box typeThin">
-    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+
+	<!-- 작동방식 -->
+	<div class="df-login-method"></div>
+
+
+	<!-- 탭 -->
+	<div class="df-login-tab">
+		<a href="/member/login.html" class="df-login-tab-item df-login-tab-item_member df-login-tab-item_active"><!-- 기존 회원 --></a>
+		<a href="/member/login.html?noMemberOrder&amp;returnUrl=%2Fmyshop%2Forder%2Flist.html?mode=guestlogin" class="df-login-tab-item df-login-tab-item_guest"><!-- 비회원 주문조회 --></a>
+	</div>
+
+
+	<!-- 회원로그인 -->
+	<form id="member_form_1955681379" name="" action="/exec/front/Member/login/" method="post" target="_self" enctype="multipart/form-data">
+<input id="returnUrl" name="returnUrl" value="/index.html" type="hidden">
+<input id="forbidIpUrl" name="forbidIpUrl" value="/index.html" type="hidden">
+<input id="certificationUrl" name="certificationUrl" value="/intro/adult_certification.html" type="hidden">
+<input id="sIsSnsCheckid" name="sIsSnsCheckid" value="" type="hidden">
+<input id="sProvider" name="sProvider" value="" type="hidden"><div id="" class="xans-element- xans-member xans-member-login df-login-member ">
     <!--
-        $orderDetailUrl = /myshop/order/list.html
-    -->
-    <h3 class="boxTitle">비회원 주문조회</h3>
-   
-    <dl class="ec-base-desc gBlank20">
-        <dt>{$form_label.order_name}</dt><dd>{$form.order_name}</dd>
-        <dt>{$form_label.order_id}</dt><dd>{$form.order_id}</dd>
-        <dt>{$form_label.order_password}</dt><dd>{$form.order_password}</dd>
-    </dl>
-    <p>비회원의 경우, 주문시의 주문번호로 주문조회가 가능합니다.</p>
-    <p class="ec-base-button gColumn"><button type="submit" class="btnNormal sizeM">주문조회</button></p>
+			$defaultReturnUrl = /index.html
+			$forbidIpUrl = member/adminFail.html
+		-->
+<fieldset class="df-login-form">
+			<legend><!-- 회원로그인 --></legend>
+			<label class="df-login-form-label id ePlaceholder" title="아이디"><input id="member_id" name="member_id" fw-filter="isFill" fw-label="아이디" fw-msg="" class="inputTypeText" placeholder="아이디" value="" type="text"></label>
+			<label class="df-login-form-label password ePlaceholder" title="비밀번호"><input id="member_passwd" name="member_passwd" fw-filter="isFill&amp;isMin[4]&amp;isMax[16]" fw-label="비밀번호" fw-msg="" autocomplete="off" value="" type="password" placeholder="비밀번호"></label>
+			<p class="df-login-security">
+				<span class="df-login-security-ssl"><i class="df-login-security-ssl-icon"></i><img src="//img.echosting.cafe24.com/design/skin/default/member/ico_access.gif" alt="보안접속"> 보안접속 </span>
+				<span class="df-login-security-save"><input id="member_check_save_id0" name="check_save_id" fw-filter="" fw-label="아이디저장" fw-msg="" value="T" type="checkbox"><label for="member_check_save_id0">아이디 저장</label></span>
+			</p>
+		</fieldset>
+<div class="df-login-action">
+			<a href="#none" class="df-login-action-item df-login-action-item_login" onclick="MemberAction.login('member_form_1955681379'); return false;"><!-- 로그인 --></a>
+			<a href="" class="df-login-action-item df-login-action-item_guestorder displaynone" onclick=""><!-- 비회원구매 --></a>
+		</div>
+<div class="df-login-util">
+			<a href="/member/id/find_id.html" class="df-login-util-item df-login-util-item_findid"><!-- 아이디찾기 --></a>
+			<a href="/member/passwd/find_passwd_info.html" class="df-login-util-item df-login-util-item_findpw"><!-- 비밀번호찾기 --></a>
+			<a href="/member/join.html" class="df-login-util-item df-login-util-item_join"><!-- 회원가입 --></a>
+		</div>
+<div class="df-login-sns">
+			<!-- 라인 로그인 -->
+			<a href="#none" class="df-login-sns-item df-login-sns-item_line displaynone" title="LINE LOGIN" onclick="">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296.528 296.528"><path d="M295.838,115.347l0.003-0.001l-0.092-0.76c-0.001-0.013-0.002-0.023-0.004-0.036c-0.001-0.011-0.002-0.021-0.004-0.032   l-0.344-2.858c-0.069-0.574-0.148-1.228-0.238-1.974l-0.072-0.594l-0.147,0.018c-3.617-20.571-13.553-40.093-28.942-56.762   c-15.317-16.589-35.217-29.687-57.548-37.878c-19.133-7.018-39.434-10.577-60.337-10.577c-28.22,0-55.627,6.637-79.257,19.193   C23.289,47.297-3.585,91.799,0.387,136.461c2.056,23.111,11.11,45.11,26.184,63.621c14.188,17.423,33.381,31.483,55.503,40.66   c13.602,5.642,27.051,8.301,41.291,11.116l1.667,0.33c3.921,0.776,4.975,1.842,5.247,2.264c0.503,0.784,0.24,2.329,0.038,3.18   c-0.186,0.785-0.378,1.568-0.57,2.352c-1.529,6.235-3.11,12.683-1.868,19.792c1.428,8.172,6.531,12.859,14.001,12.86   c0.001,0,0.001,0,0.002,0c8.035,0,17.18-5.39,23.231-8.956l0.808-0.475c14.436-8.478,28.036-18.041,38.271-25.425   c22.397-16.159,47.783-34.475,66.815-58.17C290.172,175.745,299.2,145.078,295.838,115.347z M92.343,160.561H66.761   c-3.866,0-7-3.134-7-7V99.865c0-3.866,3.134-7,7-7c3.866,0,7,3.134,7,7v46.696h18.581c3.866,0,7,3.134,7,7   C99.343,157.427,96.209,160.561,92.343,160.561z M119.03,153.371c0,3.866-3.134,7-7,7c-3.866,0-7-3.134-7-7V99.675   c0-3.866,3.134-7,7-7c3.866,0,7,3.134,7,7V153.371z M182.304,153.371c0,3.033-1.953,5.721-4.838,6.658   c-0.712,0.231-1.441,0.343-2.161,0.343c-2.199,0-4.323-1.039-5.666-2.888l-25.207-34.717v30.605c0,3.866-3.134,7-7,7   c-3.866,0-7-3.134-7-7v-52.16c0-3.033,1.953-5.721,4.838-6.658c2.886-0.936,6.045,0.09,7.827,2.545l25.207,34.717V99.675   c0-3.866,3.134-7,7-7c3.866,0,7,3.134,7,7V153.371z M233.311,159.269h-34.645c-3.866,0-7-3.134-7-7v-26.847V98.573   c0-3.866,3.134-7,7-7h33.57c3.866,0,7,3.134,7,7s-3.134,7-7,7h-26.57v12.849h21.562c3.866,0,7,3.134,7,7c0,3.866-3.134,7-7,7   h-21.562v12.847h27.645c3.866,0,7,3.134,7,7S237.177,159.269,233.311,159.269z"></path></svg>	
+			</a>
+
+			<!-- 페이스북 로그인 -->
+			<a href="#none" class="df-login-sns-item df-login-sns-item_facebook " title="FACEBOOK LOGIN" onclick="MemberAction.snsLogin('facebook', '%2Findex.html')">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path></svg>
+			</a>
+
+			<!-- 야후 로그인 -->
+			<a href="#none" class="df-login-sns-item df-login-sns-item_yahoo displaynone" title="YAHOO LOGIN" onclick="">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.7 141.1 167 284.2 111 141.1H14.9L120.8 390.2 82.2 480h94.2L317.3 141.1zm105.4 135.8a58.2 58.2 0 1 0 58.2 58.2A58.2 58.2 0 0 0 329.1 276.9zM394.7 32l-93 223.5H406.4L499.1 32z"></path></svg>
+			</a>
+
+			<!-- 구글 로그인 -->
+			<a href="#none" class="df-login-sns-item df-login-sns-item_google " title="GOOGLE LOGIN" onclick="MemberAction.snsLogin('googleplus', '%2Findex.html')">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"></path></svg>				
+			</a>
+
+			<!-- 애플 로그인 -->
+			<a href="#none" class="df-login-sns-item df-login-sns-item_apple " title="APPLE LOGIN" onclick="MemberAction.snsLogin('apple', '%2Findex.html')">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+			</a>
+
+		</div>
+</div>
+</form>
+
+
+<!-- 비회원 로그인 -->
+<form id="historyNoLoginForm" name="" action="/exec/front/MyShop/OrderHistoryLogin/" method="POST" target="_self" enctype="multipart/form-data">
+    <input id="order_detail_url" name="order_detail_url" value="/myshop/order/list.html" type="hidden"><div id="order_history_nologin_id" class="xans-element- xans-myshop xans-myshop-orderhistorynologin df-login-guest">
+        <!--
+            $orderDetailUrl = /myshop/order/list.html
+            -->
+    <div class="df-login-form">
+                <label class="df-login-form-label id ePlaceholder" title="주문자명"><input id="order_name" name="order_name" fw-filter="isFill" fw-label="주문자명" fw-msg="" class="inputTypeText" placeholder="주문자명" value="" type="text"></label>
+                <label class="df-login-form-label id ePlaceholder" title="주문번호"><input id="order_id" name="order_id" maxlength="18" fw-filter="isOrderid&amp;isFill" fw-label="주문번호" fw-msg="" value="" type="text" placeholder="주문번호" title="주문번호"></label>
+                <label class="df-login-form-label id ePlaceholder" title="비회원주문 비밀번호"><input id="order_password" name="order_password" fw-filter="isFill" fw-label="비회원주문 비밀번호" fw-msg="" value="" type="password" placeholder="비회원주문 비밀번호"></label>
+            </div>
+    <div class="df-login-action">
+                <button type="submit" class="df-login-action-item df-login-action-item_guestlogin"><!-- 주문조회 --></button>
+            </div>
+    </div>
+    </form>
+
+
+	<!-- 정보 -->
+	<div class="df-login-info">
+		<h3 class="df-login-info-title"><!-- 회원가입 안내 --></h3>
+		<a href="/member/join.html" class="df-login-info-desc"><!-- 설명 --><span class="xans-element- xans-layout xans-layout-logotop ">PORTMEIRION</span>
+<!-- 설명 --></a>
+	</div>
+
+
 </div>
