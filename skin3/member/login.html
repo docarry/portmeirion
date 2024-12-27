@@ -1,6 +1,6 @@
 <!--@layout(/layout/basic/layout.html)-->
 
-<div class="df-login">
+<div class="df-login" module="member_login">
 
     <!-- 헤더 -->
     <div class="df-login-header">
@@ -28,7 +28,7 @@
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.891 595.281"><polygon points="516.19,0 516.19,291.687 325.7,0 123.304,0 123.304,595.281 325.7,595.281 325.7,297.64     516.19,595.281 718.586,595.281 718.586,0   "></polygon></svg>	
 			</a> -->
 
-            <ul class="snsArea" module="member_login">
+            <ul class="snsArea">
                 <li class="{$display_naver|display}">
                     <a href="#none" class="df-login-sns-item df-login-sns-item_naver df-login-sns-item_naver " title="NAVER LOGIN" onclick="{$naver_func_login}">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.891 595.281"><polygon points="516.19,0 516.19,291.687 325.7,0 123.304,0 123.304,595.281 325.7,595.281 325.7,297.64     516.19,595.281 718.586,595.281 718.586,0   "></polygon></svg>	
@@ -83,7 +83,7 @@
 		</fieldset>
 <div class="df-login-action">
 			<a href="#none" class="df-login-action-item df-login-action-item_login" onclick="MemberAction.login('member_form_1955681379'); return false;"><!-- 로그인 --></a>
-			<a href="" class="df-login-action-item df-login-action-item_guestorder displaynone" onclick=""><!-- 비회원구매 --></a>
+			<a href="{$returnUrl}" class="df-login-action-item df-login-action-item_guestorder link {$display_nomember|display}" id="noMemberWrap" onclick="{$action_nomember_order}"><!-- 비회원구매 --></a>
 		</div>
 <div class="df-login-util">
 			<a href="/member/id/find_id.html" class="df-login-util-item df-login-util-item_findid"><!-- 아이디찾기 --></a>

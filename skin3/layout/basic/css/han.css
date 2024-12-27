@@ -324,6 +324,14 @@ input[type=radio]:not(old):checked {
 .board-paginate.ec-base-paginate {
     margin: 30px 0 2rem;
 }
+/* 헬프아이콘 */
+span.ec-base-help, p.ec-base-help, ul.ec-base-help li {
+    margin: 2px 9px;
+    padding: 1px 0px 1px 30px;
+    line-height: 1.4;
+    text-align: left;
+    background: url('/img/icon/Info_light.svg') no-repeat 0 1px;
+}
 /* ********** 공통 클래스 종료 ********** */
 
 
@@ -2595,84 +2603,600 @@ input[type=checkbox]:not(old):checked {
     border-spacing: 0;
     border-top: 1px solid #202020;
 }
+.xans-board-writepackage .ec-base-table tbody th {
+    border: 0;
+    padding: 12px 0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #202020;
+    line-height: 34px;
+    font-weight: normal;
+    border-bottom: solid 1px #e5e5e5;
+}
+.xans-board-writepackage .ec-base-table .bor-none tr:nth-child(3) th,
+.xans-board-writepackage .ec-base-table .bor-none tr:nth-child(3) td{
+    border-bottom: 0;
+}
+.xans-board-writepackage .ec-base-table td{
+    text-align: left;
+    border: 0;
+    border-bottom: solid 1px #e5e5e5;
+    font-size: 14px;
+}
+.xans-board-writepackage .ec-base-table tbody td input {
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e9e9e9;
+    margin-right: 8px;
+    font-size: 14px;
+    background-color: #fff;
+}
+.xans-board-writepackage select{
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+}
+.xans-board-writepackage .info{
+    font-size: .875rem;
+}
+.xans-board-writepackage .info li {
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 0;
+}
+.xans-board-writepackage .info li:before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 2px;
+    background: #e5e5e5;
+}
+.xans-board-writepackage [class^='btnNormal'],
+.xans-board-writepackage [class^='btnBasic'] {
+    border-radius: 4px;
+    background-color: #fff !important;
+    width: 120px !important;
+    padding: 14px 14px;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.xans-board-writepackage [class^='btnSubmit'], 
+.xans-board-writepackage [class^='btnEm'] {
+    border-radius: 4px;
+    width: 120px !important;
+    padding: 14px 14px;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.xans-board-writepackage [class^='btnNormal']:hover, 
+.xans-board-writepackage [class^='btnBasic']:hover {
+    background-color: #f5f5f5 !important;
+}
+.xans-board-writepackage [class^='btnSubmit']:hover, 
+.xans-board-writepackage [class^='btnEm']:hover {
+    background-color: #000;
+}
+.xans-board-writepackage .ec-base-button {
+    margin: 10px 0 6rem;
+}
 /* ********** board/product/write 글쓰기 종료 ********** */
 
 
-.xans-member-login { margin:14px auto 29px; border-top:1px solid #c8cdd2; }
-.xans-member-login .loginWrap { background:#fff; }
-.xans-member-login .titleArea { max-width:320px; height:43px; margin:0 auto; }
+/* ********** login 로그인 시작 ********** */
+.df-login label {
+    margin: 0;
+}
 
-.xans-member-login .loginHeader { padding-right:14px; }
-.xans-member-login .loginHeader:after { content:""; display:block; clear:both; }
+.df-login label + label {
+    margin: 0;
+}
 
-.xans-member-login .keyboard { line-height:43px; text-align:right; }
-.xans-member-login .keyboard .btnKey { position:relative; padding:0 20px 0 0; color:#757575; font-size:11px; cursor:pointer; border:0; background:none; }
-.xans-member-login .keyboard .btnKey.korean { display:inline-block; margin:0 14px 0 0; }
-.xans-member-login .keyboard .btnKey.special { display:inline-block; margin:0; }
-.xans-member-login .keyboard .btnKey:focus { outline:none; }
-.xans-member-login .keyboard .btnKey:before { content:""; position:absolute; right:0; top:50%; width:13px; height:8px; margin:-3px 0 0; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_toggle_arrow_down.png") no-repeat 0 50%; background-size:100% 100%; }
-.xans-member-login .keyboard .btnKey.selected { color:#508bed; border:none; }
-.xans-member-login .keyboard .btnKey.selected:before { background-image: url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/ico_toggle_arrow_up.png"); }
+.df-login-ready {
+    display: none;
+}
 
-.xans-member-login .view { text-align:center; }
-.xans-member-login .view > div { display:none; padding:0 0 14px; }
+.df-login {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 260px;
+    max-width: 420px;
+    padding-bottom: 8rem;
+}
+.df-login-header{
+    display: none;
+    /* display:flex;
+    justify-content:space-between;
+    height:60px; */
+}
+.df-login-header-button {
+    height:60px 
+}
+.df-login-header-button_prev,
+.df-login-header-button_home {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer 
+}
+.df-login-header-button_prev svg {
+    height:24px 
+}
+.df-login-header-button_home svg {
+    height:18px 
+}
+.df-login-titlearea {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
-.xans-member-login .formBox { position:relative; margin:0px 14px 0; font-size:11px; }
-.xans-member-login .formBox:after { content:""; display:block; clear:both; }
-.xans-member-login .formBox .form { margin:0 0px 0 0; }
-.xans-member-login .formBox .form input[type="text"],
-.xans-member-login .formBox .form input[type="password"] { width:100%; height:43px; }
-.xans-member-login .formBox .form input[type="text"] { margin:0 0 7px; }
-.xans-member-login .formBox .option { overflow:hidden; line-height:43px; font-size:13px; }
-.xans-member-login .formBox .option > span { float:left; margin:0 10px 0 0; }
-.xans-member-login .formBox .option > span img { margin-top:-3px; }
-.xans-member-login .formBox .option > span:last-child { margin-right:0; }
-.xans-member-login .formBox .option .ssl { position:absolute; top:-43px; left:0; }
-.xans-member-login .formBox .option .ssl em { color:#757575; vertical-align:middle; }
-.xans-member-login .formBox .option .ssl img { width:14px; margin:0 3px 0 0; vertical-align:middle; }
-.xans-member-login .formBox .option .setIpSecurity { position: relative; float:right; }
-.xans-member-login .formBox .option .setIpSecurity .inpCheck { position: absolute; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; border: 0; opacity: .01; -ms-filter: "alpha(opacity=1)"; cursor: pointer; background-image:none !important; background-size:initial !important; }
-.xans-member-login .formBox .option .setIpSecurity .labSecurity { margin:0 0 3px 0; padding:0; font-weight: 700; text-decoration-line: underline; }
-.xans-member-login .formBox .option .setIpSecurity input[type="checkbox"]:checked ~ .labSecurity { color:#0985DF; }
+.df-login-titlearea-title {
+    color: #000;
+    font-weight: 500;
+}
 
-.xans-member-login .loginUtil { height:35px; margin:0 auto; font-size:13px; text-align:center; line-height:25px; }
-.xans-member-login .loginUtil .btnLogin { position:relative; display:inline-block; padding:0 14px 0 15px; color:#858585; font-weight:normal; }
-.xans-member-login .loginUtil .btnLogin:before { display:block; content:""; position:absolute; top:6px; left:0; width:1px; height:13px; background:#848484; }
-.xans-member-login .loginUtil .btnLogin:first-child:before { display:none; }
-.xans-member-login .loginUtil .btnLogin .icon { display:inline-block; width:5px; padding:0 7px 0 6px; }
-.xans-member-login .snsLogin .btnNaver {
-    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
-    background:#26c826 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_naver.png") no-repeat 13px 0; background-size:33px 33px;
-    -moz-box-sizing:border-box; box-sizing:border-box;
+.df-login-titlearea-info {
+    margin-top: 15px;
+    color: #7d7d7f;
 }
-.xans-member-login .snsLogin .btnFacebook {
-    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:33px; line-height:33px; padding:0 0 0 45px;
-    background:#4267b2 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_facebook.png") no-repeat 13px 0; background-size:33px 33px;
-    -moz-box-sizing:border-box; box-sizing:border-box;
+
+.df-login_general .df-login-titlearea-info {
+    display: none;
 }
-.xans-member-login .snsLogin .btnGoogle {
-    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:33px; line-height:33px; padding:0 0 0 45px;
-    background:#517ff3 url("//img.echosting.cafe24.com/skin/mobile/member/ico_google.png") no-repeat 0 0; background-size:auto 31px; border:1px solid #517ff3;
-    -moz-box-sizing:border-box; box-sizing:border-box;
+
+.df-login_general .df-login-method {
+    display: none;
 }
-.xans-member-login .snsLogin .btnKakao {
-    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#3c1e1e; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
-    background:#ffeb00 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_kakao.png") no-repeat 11px 1px; background-size:auto 33px;
-    -moz-box-sizing:border-box; box-sizing:border-box;
+
+.df-login_general .df-login-banner {
+    margin-top: 0;
 }
-.xans-member-login .snsLogin .btnLine {
-    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
-    background:#26c826 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_line.png") no-repeat 10px 0; background-size:35px 33px;
-    -moz-box-sizing:border-box; box-sizing:border-box;
+
+.df-login-titlearea-title:after {
+    font-size: 28px;
 }
-.xans-member-login .snsLogin .btnApple {
-    display:block; margin:10px 0 0; border:0; border-radius:2px; font-size:13px; color:#fff; text-align:center; height:34px; line-height:33px; padding:0 0 0 45px;
-    background:#000 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_apple.png") no-repeat 13px 0; background-size:33px 33px;
-    -moz-box-sizing:border-box; box-sizing:border-box;
+
+:lang(ko) .df-login-titlearea-title:after {
+    content: "로그인";
 }
-.xans-member-login .snsLogin .btnYahoo { display: block; margin: 10px 0 0; border:1px solid #ff0033; border-radius: 2px; font-size: 13px; color: #fff;
-    text-align: center; height: 34px; line-height: 33px; padding: 0 0 0 45px; background: #ff0033 url("//img.echosting.cafe24.com/skin/mobile/member/ico_btn_yahoo2.png") no-repeat 0 0;
-    background-size: 45px 33px; -moz-box-sizing: border-box; box-sizing: border-box;
+.df-login-titlearea-info:after {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    white-space: pre;
 }
-.xans-member-login #member_id,
-.xans-member-login #member_passwd { font-size:15px; }
+
+:lang(ko) .df-login-titlearea-info:after {
+    content: "1초 회원가입으로 간편하게 로그인하고 \A 다양한 서비스를 이용해보세요!";
+}
+
+.df-login .snsArea{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.df-login-banner {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.df-login-banner a {
+    position: relative;
+}
+
+.df-login-banner img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 6px;
+}
+
+.df-login-tab {
+    margin-top: 20px;
+    display: flex;
+    background: #f7f7f9;
+    border-radius: 6px;
+}
+
+.df-login-tab-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -.25px;
+    line-height: 1;
+    color: #7d7d7f;
+}
+
+:lang(ja) .df-login-tab-item {
+    font-size: 13px;
+    letter-spacing: -.5px;
+}
+
+.df-login-tab-item_active {
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+}
+
+:lang(ko) .df-login-tab-item_member:after {
+    content: "기존 회원이세요?";
+}
+:lang(ko) .df-login-tab-item_guest:after {
+    content: "비회원 주문조회";
+}
+.df-login-guest {
+    display: none;
+}
+
+.df-login-security {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-size: 13.5px;
+    letter-spacing: -.25px;
+    color: #1d1d1f;
+}
+
+.df-login-security-ssl,.df-login-security-save {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.df-login-security-ssl img {
+    display: none;
+}
+
+.df-login-security-ssl-icon {
+    position: relative;
+    display: inline-flex;
+    height: 14px;
+    width: 24px;
+    background: #333;
+    border-radius: 32px;
+}
+
+.df-login-security-ssl-icon:after {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background: #fff;
+    content: "";
+}
+
+.df-login-security-save input[type="checkbox"] {
+    margin: 0;
+}
+
+.df-login-security-save input[type=checkbox] + label {
+    margin: 0;
+}
+
+.df-login-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.df-login-form-label input[type=text],.df-login-form-label input[type=password] {
+    width: 100%;
+    height: 52px;
+    padding: 0;
+    padding-left: 6px;
+    border: 0;
+    border-bottom: 1px solid #e7e7e7;
+    font-size: 14px;
+    color: #1d1d1f;
+}
+
+.df-login-form-label input[type=text]:focus,.df-login-form-label input[type=password]:focus {
+    border-color: #2d2d2f;
+}
+
+:lang(ko) .df-login-form-text_pw:after {
+    content: "비밀번호";
+}
+.df-login-util {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.df-login-util-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14.5px;
+    letter-spacing: -.25px;
+    color: #7d7d7f;
+}
+
+:lang(ja) .df-login-util-item {
+    font-size: 12.5px;
+    letter-spacing: -.5px;
+}
+
+.df-login-util-item_join {
+    color: #000003;
+}
+
+.df-login-util-item + .df-login-util-item:before {
+    position: absolute;
+    left: -12px;
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #dfdfdf;
+    content: "";
+}
+
+:lang(ko) .df-login-util-item_findid:after {
+    content: "아이디찾기";
+}
+:lang(ko) .df-login-util-item_findpw:after {
+    content: "비밀번호찾기";
+}
+:lang(ko) .df-login-util-item_join:after {
+    content: "회원가입";
+}
+.df-login-action {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.df-login-action-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    box-sizing: border-box;
+}
+
+.df-login-action-item_login {
+    background: #333;
+    color: #fff;
+    border-radius: 6px;
+}
+.df-login-action-item_login:hover{
+    background: #000;
+}
+
+.df-login-action-item_guestorder {
+    border: 1px solid #d7d7d9;
+    border-radius: 6px;
+}
+.df-login-action-item_guestorder:hover{
+    background-color: #f5f5f5;
+}
+
+.df-login-action-item_guestlogin {
+    border: 0;
+    border-radius: 6px;
+    color: #fff;
+    background: #333;
+}
+.df-login-action-item_guestlogin:hover{
+    background: #000;
+}
+.df-login-action-item_login:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+:lang(ko) .df-login-action-item_login:after {
+    content: "로그인";
+}
+.df-login-action-item_guestorder:after {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5f5f5f;
+}
+
+:lang(ko) .df-login-action-item_guestorder:after {
+    content: "비회원 구매";
+}
+.df-login-action-item_guestlogin {
+    margin-top: 15px;
+}
+
+.df-login-action-item_guestlogin:after {
+    font-size: 16px;
+}
+
+:lang(ko) .df-login-action-item_guestlogin:after {
+    content: "비회원 주문조회";
+}
+.df-login-sns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.df-login-sns-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 52px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e9;
+    border-radius: 7px;
+}
+.df-login-sns-item_facebook:hover,
+.df-login-sns-item_google:hover,
+.df-login-sns-item_apple:hover{
+    background-color: #f5f5f5;
+}
+.df-login-sns-item:after {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2d2d2f;
+    letter-spacing: -.4px;
+}
+
+.df-login-sns-item svg {
+    position: absolute;
+    top: auto;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+}
+
+.df-login-sns-item_kakao {
+    border: 0;
+    background-color: #fee500;
+}
+
+.df-login-sns-item_kakao svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+}
+
+.df-login-sns-item_kakao:after {
+    color: #000;
+    font-weight: 600;
+}
+
+.df-login-sns-item_naver {
+    border: 0;
+    background-color: #03c75a;
+}
+
+.df-login-sns-item_naver svg {
+    width: 23px;
+    height: 23px;
+    fill: #fff;
+}
+
+.df-login-sns-item_naver:after {
+    color: #fff;
+    font-weight: 600;
+}
+.df-login-sns-item_line svg {
+    width: 21px;
+    height: 21px;
+    fill: #21c121;
+}
+.df-login-sns-item_facebook svg {
+    fill: #536fac;
+}
+
+.df-login-sns-item_yahoo svg {
+    width: 21px;
+    height: 21px;
+    fill: #6d02d7;
+}
+
+.df-login-sns-item_google svg {
+    margin-left: 1px;
+    fill: #ea4335;
+}
+.df-login-sns-item_apple svg {
+    margin-left: -1px;
+    width: 23px;
+    height: 23px;
+    fill: #3d3d3f;
+}
+
+.df-login-method {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    font-size: 14px;
+    color: #9d9d9f;
+}
+
+.df-login-method:before {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eeeef0;
+    content: "";
+}
+
+.df-login-method:after {
+    position: absolute;
+    background: #fff;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+:lang(ko) .df-login-method:after {
+    content: "또는";
+}
+:lang(ko) .df-login-sns-item_kakao:after {
+    content: "카카오 1초 로그인 · 회원가입";
+}
+:lang(ko) .df-login-sns-item_naver:after {
+    content: "네이버 1초 로그인 · 회원가입";
+}
+:lang(ko) .df-login-sns-item_facebook:after {
+    content: "페이스북으로 로그인";
+}
+:lang(ko) .df-login-sns-item_google:after {
+    content: "구글로 로그인";
+}
+:lang(ko) .df-login-sns-item_apple:after {
+    content: "Apple로 로그인";
+}
+.df-login-info {
+    margin-top: 40px;
+}
+
+.df-login-info-title {
+    font-size: 15px;
+    color: #1d1d1f;
+}
+
+.df-login-info-desc {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #7d7d7f;
+}
+
+.df-login-info-desc span {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #4d4d4f;
+}
+
+:lang(ko) .df-login-info-title:after {
+    content: "아직 회원이 아니신가요?";
+}
+:lang(ko) .df-login-info-desc:after {
+    content: "의 회원이 되어 다양한 혜택을 누리세요 :)";
+}
+/* ********** login 로그인 종료 ********** */
