@@ -1,4 +1,5 @@
 $(function() {
+
     // 탭 버튼 클릭 시
     $('.tab-btn').on('click', function() {
         var tabId = $(this).data('tab'); // 클릭한 탭의 ID 가져오기
@@ -23,19 +24,7 @@ $(function() {
         }
     });
 
-    // 포트메리온 스토리 회사소개로 이동
-    $(document).on('click', '#header .main-category-list > li:first-child > a', function() {
-        $(this).attr("href", "https://soodesignshop.cafe24.com/shopinfo/company.html");
-    });
-    // 공지사항으로 이동
-    $(document).on('click', '#header .sub-category-list:nth-child(2) > li:first-child > a', function() {
-        $(this).attr("href", "https://soodesignshop.cafe24.com/board/free/list.html?board_no=1");
-    });
-    // 이벤트로 이동
-    $(document).on('click', '#header .sub-category-list:nth-child(2) > li:nth-child(2) > a', function() {
-        $(this).attr("href", "https://soodesignshop.cafe24.com/board/gallery/list.html");
-    });
-
+    // 정렬방식
     $('#type').change(function() {
         // 선택한 페이지로 이동
         location.href = $(this).val();
@@ -154,7 +143,6 @@ var categories = new Swiper("#categories-slide", {
 // Favorite Categories 스와이퍼 슬라이드 종료 //////////
 
 
-
 document.addEventListener("DOMContentLoaded", function() {
     //로그인 탭
     if (location.href.includes("guestlogin")) {
@@ -204,6 +192,22 @@ document.addEventListener("DOMContentLoaded", function() {
             memberPasswd.setAttribute('placeholder', '密碼');
         } else if ((memberPasswd = document.querySelector(':lang(vi) #member_passwd')) !== null) {
             memberPasswd.setAttribute('placeholder', 'Mật khẩu');
+        }
+    }
+
+
+    // tr 요소 중 class가 "captcha"인 요소 찾기
+    var captchaRow = document.querySelector('tr.captcha');
+
+    if (captchaRow) {  // captchaRow가 존재하는지 확인
+        // td 요소 중 두 번째 img 태그 선택
+        var images = captchaRow.querySelectorAll('td img');
+        
+        if (images.length > 1) {  // 두 번째 이미지가 존재하는지 확인
+            var secondImage = images[1];
+
+            // img의 src 속성 변경
+            secondImage.src = '/img/icon/Refresh.svg';  // 원하는 URL을 넣으세요.
         }
     }
 });

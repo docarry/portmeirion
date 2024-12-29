@@ -176,8 +176,14 @@ $(function(){
                 if (methods.aSubCategory.hasOwnProperty(iCateNo)) {
                     if (firstCategory) {
                         aHtml.push('<ul class="main-category-list">');
-                        $(methods.aSubCategory[iCateNo]).each(function() {
-                            aHtml.push('<li class="sub-menu"><a href="'+this.link_product_list+'">'+this.name+'</a></li>');
+                        
+                        // 첫 번째 sub-menu의 href 값을 수정
+                        $(methods.aSubCategory[iCateNo]).each(function(index) {
+                            if (index == 0) { // 첫 번째 항목
+                                aHtml.push('<li class="sub-menu"><a href="https://soodesignshop.cafe24.com/shopinfo/company.html">'+this.name+'</a></li>');
+                            } else {
+                                aHtml.push('<li class="sub-menu"><a href="'+this.link_product_list+'">'+this.name+'</a></li>');
+                            }
                         });
                         aHtml.push('</ul>');
                         firstCategory = false;
@@ -203,9 +209,16 @@ $(function(){
 
                     subCategoryHtml.push('>');
 
-                    $(methods.aSubCategory[iCateNo]).each(function() {
-                        subCategoryHtml.push('<li class="sub-menu"><a href="'+this.link_product_list+'">'+this.name+'</a></li>');
-                    });
+                    $(methods.aSubCategory[iCateNo]).each(function(index) {
+                // 두 번째 sub-category-list에서 첫 번째, 두 번째 항목의 href를 변경
+                if (iCateNo == 24 && index == 0) {
+                    subCategoryHtml.push('<li class="sub-menu"><a href="https://soodesignshop.cafe24.com/board/free/list.html?board_no=1">'+this.name+'</a></li>');
+                } else if (iCateNo == 24 && index == 1) {
+                    subCategoryHtml.push('<li class="sub-menu"><a href="https://soodesignshop.cafe24.com/board/gallery/list.html">'+this.name+'</a></li>');
+                } else {
+                    subCategoryHtml.push('<li class="sub-menu"><a href="'+this.link_product_list+'">'+this.name+'</a></li>');
+                }
+            });
 
                     subCategoryHtml.push('</ul>');
                 }
