@@ -3200,3 +3200,10 @@ input[type=checkbox]:not(old):checked {
     content: "의 회원이 되어 다양한 혜택을 누리세요 :)";
 }
 /* ********** login 로그인 종료 ********** */
+
+
+/* ********** event 이벤트 시작 ********** */
+#event-path{
+    visibility: hidden;
+}
+/* ********** event 이벤트 종료 ********** */
