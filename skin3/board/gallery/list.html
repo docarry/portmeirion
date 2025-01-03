@@ -38,6 +38,20 @@
                     <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
                     <div class="description">
                         <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}"> {$subject} {$icon_new} {$comment_count}</a></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                    <div class="description">
+                        <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}"> {$subject} {$icon_new} {$comment_count}</a></p>
+                    </div>
+                </li>
+            </ul>
+            <!-- <ul>
+                <li>
+                    <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                    <div class="description">
+                        <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}"> {$subject} {$icon_new} {$comment_count}</a></p>
                         <strong>작성자 : {$member_icon}{$writer}</strong>
                         <em class="{$date_display|display}">작성일 : {$write_date}</em>
                     </div>
@@ -50,7 +64,7 @@
                         <em class="{$date_display|display}">작성일 : {$write_date}</em>
                     </div>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         <div module="board_fixed_8">
             <!--
@@ -88,7 +102,7 @@
             <li class="{$block_target_class}" {$block_data_attr}>
                 <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
                 {$checkbox}
-                <a href="{$link_board_detail}" class="imgLink {$block_content_class}">[{$no}] {$subject} {$comment_count}</a>
+                <a href="{$link_board_detail}" class="imgLink {$block_content_class}">{$subject} {$comment_count}</a>
                 <span>
                     <strong>작성자 : {$member_icon}{$writer} </strong>
                     <em class="{$date_display|display}">작성일 : {$write_date}</em>
@@ -97,7 +111,7 @@
             <li class="{$block_target_class}" {$block_data_attr}>
                 <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
                 {$checkbox}
-                <a href="{$link_board_detail}" class="imgLink {$block_content_class}">[{$no}] {$subject} {$comment_count}</a>
+                <a href="{$link_board_detail}" class="imgLink {$block_content_class}">{$subject} {$comment_count}</a>
                 <span>
                     <strong>작성자 : {$member_icon}{$writer} </strong>
                     <em class="{$date_display|display}">작성일 : {$write_date}</em>
