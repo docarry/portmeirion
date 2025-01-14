@@ -39,7 +39,7 @@ var categories = new Swiper("#categories-slide", {
 });
 
 
-var instagramSwiper01 = new Swiper("#instagramBox01.mySwiper", {
+var makingSwiper01 = new Swiper("#makingBox01.mySwiper", {
     slidesPerView: 4,
     loop: true,
     autoplay: {
@@ -49,7 +49,7 @@ var instagramSwiper01 = new Swiper("#instagramBox01.mySwiper", {
     },
     speed: 6000
 });
-var instagramSwiper02 = new Swiper("#instagramBox02.mySwiper", {
+var makingSwiper02 = new Swiper("#makingBox02.mySwiper", {
     slidesPerView: 4,
     loop: true,
     autoplay: {

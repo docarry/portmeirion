@@ -1,66 +1,237 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li title="현재 위치"><strong>회사소개</strong></li>
-    </ol>
-</div>
+<!--@layout(/layout/basic/main.html)-->
+<div id="portmeirionStory" class="open">
 
-<div class="titleArea">
-    <h2>회사소개</h2>
-</div>
+    <section class="hero" id="hero">
+        <div class="container">
+            <h3 class="storyTitle">
+                <span class="first-letter">P</span>ORTMEIRION STORY
+            </h3>
+            <div class="headline-description">
+                <div class="separator">
+                    <div class="line line-left"></div>
+                    <div class="asterisk"> <i class="fas fa-asterisk"></i></div>
+                    <div class="line line-right"></div>
+                </div>
+                <div class="single-animation">
+                    <h5>포트메리온 스토리</h5>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div module="mall_company">
-    <!--@css(/css/module/mall/company.css)-->
-    <div class="ec-base-table" module="Layout_footer">
-        <table border="1">
-            <caption>회사소개</caption>
-            <colgroup>
-                <col style="width:180px;">
-                <col style="width:auto;">
-            </colgroup>
-            <tbody>
-                <tr>
-                    <th scope="row">상점명</th>
-                    <td>{$mall_name}</td>
-                </tr>
-                <tr>
-                    <th scope="row">대표이사</th>
-                    <td><a href="mailto:{$email}">{$president_name}</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">대표전화</th>
-                    <td><a href="tel:{$phone}">{$phone}</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">주소</th>
-                    <td>{$mall_addr1}<br />{$mall_addr2}</td>
-                </tr>
-                <tr>
-                    <th scope="row">사업자등록번호</th>
-                    <td>{$company_regno}</td>
-                </tr>
-                <tr>
-                    <th scope="row">통신판매업신고</th>
-                    <td>{$network_regno}</td>
-                </tr>
-                <tr class="{$cpo_email|display}">
-                    <th scope="row">개인정보 관리책임</th>
-                    <td><a href="mailto:{$cpo_email}">{$cpo_name}</a></td>
-                </tr>
-                <tr>
-                    <th scope="row">호스팅제공</th>
-                    <td>카페24(주)</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 
-    <div>{$info}</div>
+    <section class="disccover-our-story boxOp">
+        <div class="portmeirion-info">
+            <div class="portmeirion-descripton animate-left">
+                <div class="global-headline">
+                    <h2 class="sub-headline">
+                        <span class="first-letter">The</span> Beginning</h2>
+                    <div class="asterisk"> <i class="fas fa-asterisk"></i></div>
+                </div>
+                <p>1960년도에 설립된 포트메리온(Portmeirion)의 역사는 <br>
+                    수잔 윌리엄스-엘리스(Susan Williams-Ellis)와 유언 쿠퍼-윌리스(Euan Coopoer-Willis) <br>
+                    부부를 통해 시작하게 됩니다.<br><br>
+                    조각과 미술을 전공한 수잔은 도자기 장식 회사를 운영하는 A.E. 그레이(A.E. Gray)의 상점에서 <br>
+                    자신의 디자인을 입힌 도자기를 처음으로 선보이게 됩니다. <br>
+                    그 후 부부는 A.E.그레이사를 매입하고, 도자기 회사인 커크햄사(Kirkham’s Limited)를 <br>
+                    인수 합병해 ‘포트메리온’이란 이름으로 사업을 시작하게 됩니다.<br><br>
+                    이를 통해 수잔은 도자기의 디자인 패턴과 형태를 함께 디자인할 수 있게 되었고, <br>
+                    말라치트(Malachite)와 모스어게이트(Moss Agate)를 시작으로, 밝고 독특한 색채의 꽃모양 디자인인 <br>
+                    포트메리온 로즈 및 타이거 릴리(Portmeirion Rose and Tiger Lily)를 선보이게 됩니다.<br><br>
+                    혁신적인 디자인으로 명성을 확립한 수잔은, 저명한 경제학자인 남편 유언과 함께 <br>
+                    도자기 사업을 성공적으로 이끌었고, 매직 시티(Magic City), 매직 가든(Magic Garden)등의 <br>
+                    디자인을 탄생시켰습니다.<br><br>
+                    1972년 탄생한 포트메리온의 대표 작품인 보타닉 가든(Botanic Garden)은 <br>
+                    이전의 딱딱하고 격식적인 분위기 대신, 다양하고 생기있는 꽃 장식을 통해 <br>
+                    산뜻하고 캐주얼한 분위기의 디자인 철학을 선보이게 되었습니다.
+            </div>
+            <div class="portmeirion-info-img animate-right">
+                <img src="/img/company03.jpg" alt="포트메리온 회사소개 이미지"></div>
+        </div>
+    </section>
 
-    <div class="{$map_display|display}">
-        <h3>위치</h3>
-        <p>{$map_image}</p>
-    </div>
+
+    <section class="discover-our-info">
+        <div class="portmeirion-info">
+            <div class="portmeirion-info-img animate-left">
+                <img src="/img/company02.jpg" alt="포트메리온 회사소개 이미지"></div>
+            <div class="portmeirion-description animate-right">
+                <div class="global-headline">
+                    <h3 class="sub-headline">Philosophy</h3>
+                    <div class="asterisk"> <i class="fas fa-asterisk"></i></div>
+                </div>
+                <p>포트메리온 도자기의 역사와 철학은 아름다움과 실용적인 면을 융합할 수 있는 <br>
+                    수잔의 뛰어난 디자인 능력으로 시작되었습니다. <br>
+                    수잔은 제품의 디자인과 생산의 품질을 위해 모든 노력을 아끼지 않았으며, <br>
+                    독창적인 디자인이 탄생하는 계기가 되었습니다.<br><br>
+
+                    2005년, 런던 예술대학에서 명예 특별연구원이 된 수잔은 이렇게 말했습니다.<br>
+                    “저는 페인팅보다는 도자기 작품을 하기로 결정하였습니다. 그렇게 하게 된 이유는, <br>
+                    누구나 합리적인 가격으로 구입할 수 있는 아름다운 것들을 만들고 싶었기 때문입니다.”<br><br>
+                    
+                    50년 간의 활동을 통해 수잔과 포트메리온은 영국을 넘어 전세계 도자기 산업에 큰 영향을 끼쳤으며, <br>
+                    수잔은 20세기 가장 위대한 디자이너 중의 한 명이 되었습니다. <br>
+                    그녀의 철학은 포트메리온의 디자인 가치관과 함께 할 것이며, <br>
+                    앞으로도 새로운 도전을 통해 포트메리온의 새로운 미래를 만들어 갈 것입니다.
+            </div>
+        </div>
+    </section>
+
+
+    <section class="discover-our-info info01">
+        <div class="portmeirion-info">
+            <div class="portmeirion-descripton animate-left">
+                <div class="global-headline">
+                    <h2 class="sub-headline">
+                        Portmeirion <span class="first-letter">Village</span></h2>
+                    <div class="asterisk"> <i class="fas fa-asterisk"></i></div>
+                </div>
+                <p>포트메리온 빌리지는 영국의 대표 도자기 브랜드인 포트메리온이 <br>
+                    시작된 곳으로 영국의 웨일즈 지방에 자리잡고 있습니다. <br>
+                    포트메리온의 디자이너이자 창업자인 수잔 윌리엄스-엘리스의 아버지, <br>
+                    클러프 윌리엄스-엘리스(Clough Williams-Ellis) 경(卿)이 1925년 구입하여 디자인한 곳으로, <br>
+                    현재까지도 영국에서 이국적인 관광지 중 하나로 유명한 곳입니다.<br><br>
+
+                    포트메리온 빌리지의 기프트숍은 1953년부터 수잔과 유언 부부가 운영하면서 유명세를 타기 시작했고, <br>
+                    1961년에 도자기의 중심지인 스토크-온-트렌트(Stoke-on-Trent)에 <br>
+                    2호점을 개업하면서 현재의 포트메리온이 완성되었습니다.<br><br>
+                    
+                    영국 국가 보호 구역으로 지정될 만큼 아름다운 자연 경관과 <br>
+                    건축학자였던 클러프 윌리엄스-엘리스경의 개성있는 디자인이 어우러진 <br>
+                    포트메리온 빌리지는 자연 속의 디즈니라고 불릴만큼 이국적인 모습을 지니고 있습니다. <br>
+                    해안가 주변에 위치한 마을은 알록달록한 파스텔 계열의 지중해식 건축물들로 구성되어 있어서 <br>
+                    마치 이탈리아의 한 마을에 와 있는 듯한 착각을 들게 할 정도입니다.<br><br>
+                    
+                    포트메리온의 성공과 함께 포트메리온 빌리지를 배경으로 한 <br>
+                    TV시리즈인 The Prisoner(‘포로’)가 방영되면서 더 많이 알려지게 되었고, <br>
+                    현재까지도 각종 드라마, 영화, TV 쇼, 뮤직비디오, 잡지 등의 <br>
+                    로케이션 장소로 인기가 높은 곳이기도 합니다.
+            </div>
+            <div class="portmeirion-info-img animate-right">
+                <img src="/img/company04.jpg" alt="포트메리온 회사소개 이미지" class="com04"></div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <div class="about-wrap">
+            <div class="text-center d-flex justify-content-center about-div">
+                <div class="wow fadeIn" data-wow-delay=".2s">
+                    <div class="about-content">
+                        <img src="/img/queens-award-for-enterprise-logo-2016.png">
+                        <h3>Queen’s Award for Enterprise</h3>
+                        <p>도자기 부문에서 50여년간의 선두자로 전세계적으로 사랑받고 있는 <br>
+                            포트메리온은 2011년도에 이어 2016년도에도 엘리자베스 2세 여왕으로부터 <br>
+                            영국 기업에게 수여되는 최고의 공로상인 Queen’s Award for Enterprise상을 수상받았습니다.</p>
+                    </div>
+                </div>
+                <div class="wow fadeIn" data-wow-delay=".4s">
+                    <div class="about-content">
+                        <img src="/img/pm_korea_20th.png">
+                        <h3>History in the making</h3>
+                        <p>포트메리온 코리아 (주)한미유나이티드는 영국 포트메리온사와 공식 판매 계약을 체결하여 <br>
+                            1999년 분당 AK플라자(구 삼성플라자)를 백화점 1호점으로 론칭을 하였고 이후 <br>
+                            신세계, 현대, 롯데, 갤러리아 등 국내 약 70여개 전국 백화점 매장에서 많은 사랑을 받아 왔습니다. <br>
+                            백화점 1호점 런칭과 같은 해인 1999년에 엘지홈쇼핑으로 TV홈쇼핑 방송을 시작하였고 이후에도 <br>
+                            현대, GS, CJ, 롯데, NS, 홈앤쇼핑 등의 채널들을 통해서도 20년간 꾸준히 많은 사랑을 받아왔습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="makingContainer">
+        <div class="makingContent">
+            <div id="makingBox01" class="swiper mySwiper" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" data-aos-delay="200">
+                <div class="swiper-wrapper makingBoxList">
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company05.jpg" alt="포트메리온 제조 1번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company06.jpg" alt="포트메리온 제조 2번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company07.jpg" alt="포트메리온 제조 3번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company08.jpg" alt="포트메리온 제조 4번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company09.jpg" alt="포트메리온 제조 5번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company10.jpg" alt="포트메리온 제조 1번 이미지입니다"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="makingBox02" class="swiper mySwiper" data-aos="fade-left" data-aos-duration="3000" data-aos-once="true" data-aos-delay="200">
+                <div class="swiper-wrapper makingBoxList">
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company11.jpg" alt="포트메리온 제조 1번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company12.jpg" alt="포트메리온 제조 2번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company13.jpg" alt="포트메리온 제조 3번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company14.jpg" alt="포트메리온 제조 4번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company15.jpg" alt="포트메리온 제조 5번 이미지입니다"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#none"><img src="/img/company16.jpg" alt="포트메리온 제조 1번 이미지입니다"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="subFooter" class="boxOp">
+        <div class="container">
+            <div class="back-to-top">
+                <a href="#hero"> <i class="fas fa-chevron-up"></i> </a>
+            </div>
+            <div class="footer-content">
+                <div class="footer-content-about animate-top">
+                    <h4>Store</h4>
+                    <div class="asterisk"> <i class="fas fa-asterisk"></i></div>
+                    <div id="map" style="width:100%;height:400px;"></div>
+                    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2e4424ed47ed1dd2282c53f7453b3deb"></script>
+                    <script>
+                        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                            mapOption = { 
+                                center: new kakao.maps.LatLng(37.38534357778385, 127.12326038351942), // 지도의 중심좌표
+                                level: 4 // 지도의 확대 레벨
+                            };
+
+                        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+                        var imageSrc = '/img/portmeirion-classic-logo.png', // 마커이미지의 주소입니다    
+                            imageSize = new kakao.maps.Size(64, 44), // 마커이미지의 크기입니다
+                            imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+                            
+                        // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+                        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                            markerPosition = new kakao.maps.LatLng(37.38534357778385, 127.12326038351942); // 마커가 표시될 위치입니다
+
+                        // 마커를 생성합니다
+                        var marker = new kakao.maps.Marker({
+                            position: markerPosition, 
+                            image: markerImage // 마커이미지 설정 
+                        });
+
+                        // 마커가 지도 위에 표시되도록 설정합니다
+                        marker.setMap(map);  
+                        </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </div>
