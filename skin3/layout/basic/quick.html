@@ -1,7 +1,12 @@
-<div id="quick">
-    <div module="Layout_orderBasketcount">
-        <!--@css(/css/module/layout/orderBasketcount.css)-->
-        <strong>장바구니</strong> <span><a href="/order/basket.html">{$basket_count}</a>개</span>
+<div id="quick" class="quick">
+    <div class="q-wrap">
+        <div module="Layout_orderBasketcount">
+            <!--@css(/css/module/layout/orderBasketcount.css)-->
+            <a href="/order/basket.html"><img src="/img/icon/cart.svg" alt="장바구니"><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span><span class="q-title">장바구니</span></a>
+        </div>
+        <div class="q-kakao">
+            <a href="#none"><img src="/img/icon/kakao.svg" alt="카카오톡"><span class="q-title">카카오톡</span></a>
+        </div>
     </div>
 
     <!-- <div module="Layout_productRecent"> -->
@@ -18,5 +23,5 @@
         <p class="player"><img src="//img.echosting.cafe24.com/skin/base/layout/btn_recent_prev.gif" alt="이전 제품" class="prev" /><img src="//img.echosting.cafe24.com/skin/base/layout/btn_recent_next.gif" alt="다음 제품" class="next" /></p>
     </div> -->
 
-    <p class="pageTop"><a href="#skipNavigation" title="화면 최상단으로 이동하기"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/layout/btn_top1.gif" alt="맨위로" /></a></p>
+    <p class="pageTop"><a href="#skipNavigation" title="화면 최상단으로 이동하기"><img src="/img/icon/Expand_up.svg" alt="맨위로" /></a></p>
 </div>
