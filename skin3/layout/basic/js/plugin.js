@@ -1,8 +1,3 @@
-// AOS 애니메이트 플러그인
-AOS.init({
-    once: true,});
-
-
 // 메인배너 스와이퍼 슬라이드
 var mainBanner = new Swiper("#main-banner", {
     loop: true,

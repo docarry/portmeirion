@@ -4,10 +4,10 @@ $(function() {
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 0) {
             $('#header').addClass('fix');
-            $('#quick').addClass('show');
+            $('#quick.quick').addClass('show');
         } else {
             $('#header').removeClass('fix');
-            $('#quick').removeClass('show');
+            $('#quick.quick').removeClass('show');
         }
     });
 
@@ -85,6 +85,25 @@ $(function() {
         }
         e.preventDefault();
     });
+
+
+    // 메인페이지 팝업 유무에 따라 딤처리
+    var repeat = setInterval(function() {
+        if ($('.app-smart-popup').length > 0) {
+            clearInterval(repeat);
+
+            if ($('.app-smart-popup').length > 0) {
+                // 팝업이 없다면
+                $('body').addClass('nodeep');
+            } else {
+                $('body').removeClass('nodeep');
+            }
+        }
+    })
+    $('body').on('click', ".smart-popup-btns button.smart-popup-close", function() {
+        $('body').removeClass('nodeep');
+    })
+
 });
 
 
@@ -151,4 +170,17 @@ document.addEventListener("DOMContentLoaded", function() {
             secondImage.src = '/img/icon/Refresh.svg';  // 원하는 URL을 넣으세요.
         }
     }
+
+    // 메인 배너 텍스트 효과
+    const textWave = document.querySelector(".startUp");
+    if (textWave) {
+        textWave.innerHTML = textWave.textContent
+            .split("")
+            .map((letter, idx) => {
+                if (letter === " ") return " ";
+                return `<span style="animation-delay:${idx * 30}ms" class="letter">${letter}</span>`;
+            })
+            .join("");
+    }
+    
 });
